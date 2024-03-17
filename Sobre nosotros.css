@@ -1,0 +1,152 @@
+.bienvenidos{ 
+    float: left;
+    width: 90%;
+    text-align: center;
+    margin: 10px 5%;
+    font-size: 200%;
+    font-family: 'Oduda Bold';
+    color: #D62828;
+}
+
+.primerparrafo{
+    float: left;
+    width: 90%;
+    text-align: justify;
+    font-size: 150%;
+    line-height: 1.2;
+    font-family: "Bookman Old Style";
+    margin: 10px 5% 6%;
+
+}
+
+.contenedoruno { 
+    width: 48%;
+    margin-left: 8%;
+    margin-bottom: 3%;
+    margin-top: 3% ;
+    border-radius: 5%;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column; /* Alinear los elementos verticalmente */
+}
+
+.carousel {  
+    border-radius: 5%;
+    margin-top: 4%;
+    margin-right: 8%;
+    float: right;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+}
+  
+  .carousel-inner {
+
+    display: flex;
+    animation: carousel 20s infinite; /* Cambia "2s" al tiempo deseado entre cada cambio de diapositiva */
+}
+  
+  .carousel-item {
+    flex: 0 0 100%;
+}
+  
+  @keyframes carousel {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(0); }
+    33.333% { transform: translateX(-100%); }
+    58.333% { transform: translateX(-100%); }
+    66.666% { transform: translateX(-200%); }
+    91.666% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+  
+  .carousel img {
+    border-radius: 5%;
+    width: 160%;
+    height: 90%;
+    object-fit: cover;
+}
+  
+  .contenedortres {
+    flex-direction: column; /* Alinear los elementos verticalmente */
+    margin-right: 20px;
+    margin-top: 30px;
+
+}
+
+  .contenedormotivacion{ width: 85%;
+    margin-left: 8%;
+    margin-bottom: 3%;
+    margin-top: 3% ;
+    border-radius: 5%;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column; /* Alinear los elementos verticalmente */
+
+}
+
+  .motivacion {
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 1%;
+    margin-bottom: 0%;
+    font-size: 200%;
+    font-family: 'Oduda Bold';
+    color: #D62828;
+}
+
+  .motivacionparrafo{
+    text-align: justify;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 150%;
+    line-height: 1.2;
+    font-family: "Bookman Old Style";
+    margin-bottom: 4%;
+
+}
+
+  .imgatito img {display: block;
+  width: 60%;
+}
+
+  .contenedorinstagram {
+    margin-left: 0.2%;
+    display: inline-block;
+    vertical-align: top; 
+}
+
+.contenedorprueba{
+    display: inline-block;
+    vertical-align: top; 
+}
+
+.contenedorimagenes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3%;
+    margin-right: 7%;
+    margin-left:5%;
+}
+
+.contenedorimagenes div {
+    flex: 1;
+}
+
+.contenedorimagenes img {
+    max-width: 90%;
+    margin-left: 30px;
+}
+
+.contenedorimagenes iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.contenedorimagenes a {
+    opacity: 0.7;
+}
+
+
+.contenedorimagenes a:hover {
+    opacity: 1;}
