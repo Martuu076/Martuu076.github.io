@@ -1,0 +1,13 @@
+
+
+.contenedor_sala { /*Agrupa en una tira la sala en vivo y las fichas de los gatitos*/
+    background-color:#FF3049;
+    display:inline-block;
+/*    position:absolute;*/
+    vertical-align: top;
+}
+
+.ficha_cine{
+    display: flex;
+    flex-direction: column;
+}
