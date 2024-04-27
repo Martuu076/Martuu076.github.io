@@ -24,15 +24,23 @@
 /*Menú, segundo encabezado*/
 .botoneramenu { /*Botonera del encabezado rojo*/
     background-color: #D62828;}
-.botoneramenu img { /*Imagen logo*/
-    margin-left: 200px;
-    margin-top: 20px;
+
+.item img { /*Imagen logo*/
+    margin-left: 20%;
+    margin-top: 2%;
 }
 
-.botoneramenu img:hover { /*Imagen logo*/
+.item img:hover { /*Imagen logo*/
     transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out; /* Agrega transición suave para efecto de cambio de filtro y de transformación */
     transform: scale(1.05); 
 }
+
+@media only screen and (max-width: 800px) {
+    .item img {
+        width: 70%;
+        height: 70%;
+    }
+    }
 
 /*Fuente agregada*/
 @font-face {font-family: 'Oduda Bold';
@@ -88,39 +96,72 @@
 
 .titulouno{ /*Titulo*/
     display: inline-block;
-    margin-left:200px;
+    margin-left:10px;
     font-family: 'Oduda Bold';
     color:#003049;
     font-size: 25px;
     padding-top: 30px;
-    padding-bottom: 0px;
 }
 
 
 .titulodos { /*Frase seguida al titulo*/
-    margin-top: 0px;
     font-family: "Bookman Old Style";
     color:#003049;
     font-size: 20px;
     line-height: 20px;
     padding-bottom: 40px;
+    margin-right: 5px;
 }
 
-
-.gatitouno { /*Primer imagen del gato*/
-    display: flex; 
-    position: absolute;
+.texto .gatitouno { /*Primer imagen del gato*/
     margin-top: 20px;
     margin-left: 80px;
+    height:100px;
+}
+.texto .gatitodos, p {
+    display: inline-block;
+    vertical-align: top; /* Alinea la parte superior de la imagen con la del texto */
+}
+.texto .gatitodos{
+    height: 100px;
+    margin-top: 10px;
 }
 
-.gatitodos { /*Segunda imagen del gato*/
-    display: inline-flex;
-    position: absolute;
-    top: 253px; 
-    left:890px; 
+@media only screen and (max-width: 715px){
+    .titulouno{ /*Titulo*/
+        display: inline-block;
+        margin-left:10px;
+        font-family: 'Oduda Bold';
+        color:#003049;
+        font-size: 100%;
+        padding-top: 30px;
+    }
+    
+    
+    .titulodos { /*Frase seguida al titulo*/
+        font-family: "Bookman Old Style";
+        color:#003049;
+        font-size: 95%;
+        line-height: 20px;
+        padding-bottom: 4%;
+        margin-right: 5px;
+    }
+    
+    .texto .gatitouno { /*Primer imagen del gato*/
+        margin-top: 2%;
+        margin-left: 8%;
+        width: 15%;
+        height: 15%;
+    }
+    .texto .gatitodos, p {
+        display: inline-block;
+        vertical-align: top; /* Alinea la parte superior de la imagen con la del texto */
+    }
+    .texto .gatitodos{
+        width: 15%;
+        height: 15%;
+    }
 }
-
 
 .busquedafiltrada h1 { /*sector busqueda filtrada*/
     color: #FCBF49;
