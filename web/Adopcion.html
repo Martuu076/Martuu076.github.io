@@ -10,6 +10,7 @@
     <link rel="icon" href="/Imagenes/Logo V3.png" type="image/x-icon">
     <!--Hoja de estilos-->
     <link rel="stylesheet" type="text/css" href="/encabezados.css">
+    <link rel="stylesheet" type="text/css" href="/adopcion.css">
 </head>
 
 
@@ -55,15 +56,108 @@
         </div>
       </div>
 
-      <!-- Cuarto encabezado-->
-    <div>
+    <!-- Cuarto encabezado-->
+<div class="contenedor-principal">
     <div class="busquedafiltrada">
         <h1>Busqueda Filtrada</h1>
     </div>
     <div class="indice">
-        <pre><h1>  <a href="/web/Home.html">Home</a> | <step style="background-color: #EAE2B7"> Adopción </step></h1></pre>
+    <pre><h1><a href="/web/Home.html"> Home</a> | <step style="background-color: #EAE2B7"> Adopción </step> </h1></pre>
     </div>
+<pre></pre>
 
+    <div class="columnafiltro">
+        <form id="localidades">
+            <label for="localidad"> Selecciona una localidad:</label>
+            <select name="localidad" id="localidad">
+                <option value="Todo CABA">Todo CABA</option>
+                <option value="Belgrano">Belgrano</option>
+                <option value="Palermo">Palermo</option>
+                <option value="Retiro">Retiro</option>
+                <option value="San Telmo">San Telmo</option>
+                <option value="San Nicolas">San Nicolas</option>
+                <option value="Urquiza">Urquiza</option>
+            </select>
+        </form>
+
+        <form id="gatoForm">
+            <input type="checkbox" id="siames" name="raza" value="siames">
+            <label for="siames">Siames</label><br>
+            <input type="checkbox" id="persa" name="raza" value="persa">
+            <label for="persa">Persa</label><br>
+            <input type="checkbox" id="bengala" name="raza" value="bengala">
+            <label for="bengala">Bengala</label><br>
+            <input type="checkbox" id="angora" name="raza" value="angora">
+            <label for="angora">Angora</label><br>
+            <input type="checkbox" id="sphynx" name="raza" value="sphynx">
+            <label for="sphynx">Sphynx</label><br>
+            <input type="checkbox" id="ragdoll" name="raza" value="ragdoll">
+            <label for="ragdoll">Ragdoll</label><br>
+            <input type="checkbox" id="maine_coone" name="raza" value="maine_coone">
+            <label for="maine_coone">Maine Coone</label><br>
+            <input type="checkbox" id="british_shorthair" name="raza" value="british_shorthair">
+            <label for="british_shorthair">British Shorthair</label><br>
+            <input type="checkbox" id="siberiano" name="raza" value="siberiano">
+            <label for="siberiano">Siberiano</label><br>
+            <input type="checkbox" id="egipcio" name="raza" value="egipcio">
+            <label for="egipcio">Egipcio</label><br>
+            <input type="checkbox" id="scottish_fold" name="raza" value="scottish_fold">
+            <label for="scottish_fold">Scottish Fold</label><br>
+    
+        </form>
+        
+        <h2>Intervalos de Edad</h2>
+        <form id="edadForm">
+            <label for="minEdad">Edad Mínima:</label>
+            <input type="number" id="minEdad" name="minEdad" min="0"><br>
+            <label for="maxEdad">Edad Máxima:</label>
+            <input type="number" id="maxEdad" name="maxEdad" min="0"><br>
+            <button type="submit">Filtrar</button>
+        </form>
+        <pre>
+        </pre>
+    </div>
+   
 </div>
+<div class="tarjeta" style="margin-left: 260px;">
+    <img src="/Imagenes/Coral.png" alt="Gato 1">
+    <div class="titulo">Coral</div>
+    <div class="descripcion">Juguetón y cariñoso.</div>
+  </div>
+  
+  <div class="tarjeta">
+    <img src="/Imagenes/Micho.png" alt="Gato 2">
+    <div class="titulo">Micho</div>
+    <div class="descripcion">Tímido al principio.</div>
+  </div>
+  
+  <div class="tarjeta">
+    <img src="/Imagenes/Nino.png" alt="Gato 3">
+    <div class="titulo">Nino</div>
+    <div class="descripcion">Verdadero explorador.</div>
+  </div>
+  <div class="tarjeta">
+    <img src="/Imagenes/Nino.png" alt="Gato 3">
+    <div class="titulo">Nino</div>
+    <div class="descripcion">Verdadero explorador.</div>
+  </div>
+
+  <div class="tarjeta">
+    <img src="/Imagenes/Coral.png" alt="Gato 1">
+    <div class="titulo">Coral</div>
+    <div class="descripcion">Juguetón y cariñoso.</div>
+  </div>
+  
+  <div class="tarjeta">
+    <img src="/Imagenes/Micho.png" alt="Gato 2">
+    <div class="titulo">Micho</div>
+    <div class="descripcion">Tímido al principio.</div>
+  </div>
+  
+  <div class="tarjeta">
+    <img src="/Imagenes/Nino.png" alt="Gato 3">
+    <div class="titulo">Nino</div>
+    <div class="descripcion">Verdadero explorador.</div>
+  </div>
 </body>
 </html>
