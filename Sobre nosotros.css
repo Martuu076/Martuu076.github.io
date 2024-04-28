@@ -122,23 +122,25 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  place-items: center;
   }
 
 .cont_ig{
   grid-area: 1/1/2/2;
 }
 
-.carousel .instagram-media{  
+.carrousel{  
   border-radius: 5%;
-  margin-top: 5%;
+  margin-left: 20%;
   width: 100%;
-  max-width: 600px;
+  max-width: 350px;
   overflow: hidden;
 }
 
 .instagram-media {
   flex: 0 0 100%;
+}
+
+.carrousel .instagram-media {
   border-radius: 5%;
   width: 100%;
   height: 90%;
@@ -146,27 +148,55 @@
 }
 
 .contenedormaps{
-  grid-area: 2 / 1 / 3 / 2;
-  margin-left: 0.2%;
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 8%;
+  grid-area: 1/2/2/3;
+  margin-left: 5%;
 }
 
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1350px){
+  .parent2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    place-items: center;
+    }
   
+  .cont_ig{
+    grid-area: 1/1/2/2;
+  }
+  
+  .carrousel{  
+    border-radius: 5%;
+    margin-right: 200px;
+    width: 100%;
+    max-width: 350px;
+    overflow: hidden;
+  }
+  
+  .instagram-media {
+    flex: 0 0 100%;
+  }
+  
+  .carrousel .instagram-media {
+    border-radius: 5%;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+  }
+  
+  .contenedormaps{
+    grid-area: 2/1/3/2;
+  }
 }
 
-  .contenedormotivacion{ width: 85%;
-    margin-left: 8%;
-    margin-bottom: 3%;
-    margin-top: 3% ;
-    border-radius: 4%;
-    background-color: antiquewhite;
-    display: flex;
-    flex-direction: column; /* Alinear los elementos verticalmente */
-
-}
+.contenedormotivacion{ width: 85%;
+  margin-left: 8%;
+  margin-bottom: 3%;
+  margin-top: 3% ;
+  border-radius: 4%;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column; /* Alinear los elementos verticalmente */
+} 
 
   .motivacion {
     text-align: center;
