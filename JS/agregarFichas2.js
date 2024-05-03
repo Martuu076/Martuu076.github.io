@@ -34,4 +34,3 @@ var cantidad = Math.floor(2+Math.random() * 7); //entre 2 y 8 gatitos
 for(i=0;i<cantidad;i++){
     agregarFicha2(fotos[i%10],nombres[i%10],descripcion[i%10]);
 }
-
