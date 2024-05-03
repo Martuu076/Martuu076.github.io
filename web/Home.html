@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
   <!-- Link al css del slider -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" type="text/css" href="../encabezados.css">
     <link rel="stylesheet" type="text/css" href="../Sobre nosotros.css">
 </head>
@@ -23,50 +23,41 @@
     </div>
 
     <!-- Segundo Encabezado-->
-    <div class="botoneramenu">
-        <a href="../web/Home.html"><img src="../Imagenes/Logo V2 Fondo oscuro.png" height="100px"></a></img>
 
+    <!-- Tercer encabezado-->
+    <div class="botoneramenu">
+      <div class="item">
+        <a href="../web/Home.html"><img src="../Imagenes/Logo V2 Fondo oscuro.png"></a></img>
+      </div>
         <!-- Botones, agregar la clase "paginaboton" en el boton que este en la pagina seleccionada--> 
         <aside> <!-- El aside es para la botonera-->
-        <a href="../web/Home.html" class="paginaboton"> Home </a>
-        <a href="../web/Adopcion.html" class="botones"> Adopcion </a>
-        <a href="../web/En vivo.html" class="botones"> En vivo </a>
-        <a href="../web/Sobre nosotros.html" class="botones"> Sobre nosotros </a>
-        <div class="dropdown">
-        <button class="botones dropbtn">Colabora</button> <!--dropbtn es una clase de CSS que se utiliza para estilizar un botón desplegable.-->
-            <div class="dropdown-content"> 
-            <a href="../web/Donar.html">Donar</a>
-            <a href="../web/Apadrina a un gatito.html">Apadrina un gatito</a>
-            <a href="../web/Ayudá en el refugio.html">Ayudá en el refugio</a>
-            <a href="../web/Transito de gatitos.html">Transito de gatitos</a>
-            </div>
-        </div>
+          <a href="../web/Home.html" class="paginaboton"> Home </a>
+          <a href="../web/Adopcion.html" class="botones"> Adopcion </a>
+          <a href="../web/En vivo3.html" class="botones"> En vivo </a>
+          <a href="../web/Sobre nosotros.html" class="botones"> Sobre nosotros </a>
         </aside>
     </div>
 
     <!-- Tercer encabezado-->
     <div class="tercerencabezado"> <!--Div madre-->
-
-        <!--Primer div-->
-        <div class="gatitouno"> 
-          <img src="../Imagenes/Gatito 1.png" height="100px"> 
-        </div>
-
         <!-- Segundo div-->
         <div class="texto">
-          <p class="titulouno">¡Bienvenido al Refugio Garritas! <br> <step class="titulodos"> Un lugar con mucho amor. </step></p>
+          <img src="../Imagenes/Gatito 1.png" class="gatitouno">
+          <p class="titulouno">Sobre el refugio <br> <step class="titulodos">Te contamos un poco mas sobre nosotros.</step></p>
+          <img src="../Imagenes/Gatito 2.png" class="gatitodos">
         </div>
-
-        <!-- Tercer div -->
-        <div>
-        <img src="../Imagenes/Gatito 2.png" height="100px" class="gatitodos">
+    </div>
+      
+      <!-- Cuarto encabezado-->
+        <div class="indice">
+        <pre><h1>  <a href="../web/Home.html">Home</a> | <step style="background-color: #EAE2B7"> Sobre nosotros </step></h1></pre>
         </div>
-      </div>
+    
 </div>
   <!-- Swiper -->
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img  class="imgs" src="../Imagenes/fondo1.jpg"><a href="link.html" class="textoo">Perro</a></div>
+      <div class="swiper-slide"><img  class="imgs" src="../Imagenes/fondo1.jpg"><a href="link.html" class="textoo">EN CONSTRUCCION</a></div>
       <div class="swiper-slide">Slide 2</div>
       <div class="swiper-slide">Slide 3</div>
       <div class="swiper-slide">Slide 4</div>
@@ -80,7 +71,7 @@
     <div class="texto1">
       <h1>CONÓCENOS</h1>
       <p>Somos un equipo de personas impulsadas por la empatía hacia los animales reconocidos como nuestros semejantes debido a su capacidad para experimentar placer, dolor y sufrimiento.</p>
-      <a href="#" class="boton">VER MÁS</a>
+      <a href="../web/Sobre nosotros.html" class="boton">VER MÁS</a>
     </div>
   </div>
   <!-- Link al swiper js -->

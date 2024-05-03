@@ -1,26 +1,15 @@
-
-
-.contenedor_sala { /*Agrupa en una tira la sala en vivo y las fichas de los gatitos*/
-    background-color:#FF3049;
-    display:inline-block;
-/*    position:absolute;*/
-    vertical-align: top;
-}
-
 .container {
     display: flex;
     flex-direction: column;
     /*align-items: center;*/
-
+    background-color:#f7e68280;
 }
 
 .franja {
-    background-color:#f7e68280;
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: 2fr;
     padding: 5px;
-
 }
 .video {
     width: 100%; /* Ajustar el tamaño del video según sea necesario */
@@ -38,12 +27,30 @@
     flex-direction: column;
     flex-wrap: wrap;
 }
+.descripcion{
+    max-width: 200px; /* Ancho máximo del texto igual al de la imagen */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Se mostrará puntos suspensivos si el texto desborda */
+    white-space: normal; /* Permite el ajuste del texto a múltiples líneas */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limita el texto a dos líneas */
+    -webkit-box-orient: vertical;
+    margin-top: 0px; /* Espacio entre la imagen y el texto */
+    cursor: help; /* Cambia el cursor a un
+indicador de ayuda */
+}
 @media only screen and (max-width:915px){
-    .franja {
+    .container {
+        display: flex;
+        flex-direction: column;
+        /*align-items: center;*/
         background-color:#f7e68280;
+    }
+    .franja {
+
         display: grid;
-        grid-template-columns: 2fr;
-        grid-template-rows: 350px 300px ;
+        grid-template-columns: 3fr;
+        grid-template-rows: 2fr;
         padding: 5px;
         margin-bottom: 25px;
     }
@@ -67,3 +74,29 @@
 
 }
 
+/*@media only screen and (max-width:667px){
+    .franja {
+        background-color:#a982f780;
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: 350px 300px ;
+        padding: 5px;
+        margin-bottom: 15px;
+    }
+    .video {
+        width: 100%; Ajustar el tamaño del video según sea necesario 
+        height: 100%;
+    }
+    
+    .cinta {
+        margin-top: 20px ;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 20px;
+    }
+    .ficha_cine{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}*/
