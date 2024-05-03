@@ -190,7 +190,7 @@
 
 .contenedormotivacion{ width: 85%;
   margin-left: 8%;
-  margin-bottom: 3%;
+  margin-bottom: 1%;
   margin-top: 3% ;
   border-radius: 4%;
   background-color: antiquewhite;
@@ -202,7 +202,6 @@
     text-align: center;
     margin-left: 10px;
     margin-top: 1%;
-    margin-bottom: 0%;
     font-size: 200%;
     font-family: 'Oduda Bold';
     color: #D62828;
@@ -217,6 +216,51 @@
     font-family: "Bookman Old Style";
     margin-bottom: 4%;
 
+}
+
+.formulario{
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  margin-bottom: 1%;
+}
+
+.formulario form {
+  width: 60vw; /* Ajusta el ancho del formulario al 90% del ancho de la ventana */
+  height: 60vh; /* Ajusta el alto del formulario al 90% del alto de la ventana */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex; /* Usa flexbox para el diseño */
+  flex-direction: column; /* Alinear elementos en columna */
+  justify-content: space-around; /* Distribuye los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+}
+.formulario input[type="text"], input[type="email"], textarea, select, input[type="tel"], input[type="submit"] {
+  width: calc(100% - 20px); /* Ajusta el ancho para tener en cuenta el relleno */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.formulario textarea {
+  width: calc(100% - 20px); /* Ajusta el ancho al 100% menos el relleno */
+  height: 150px; /* Altura fija */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: vertical; /* Permite redimensionar verticalmente */
+}
+.formulario a input[type="submit"] {
+  background-color: #EFBB14;
+  color: white;
+  border: none;
+  width: 40vw;
+  cursor: pointer;
+}
+.formulario a input[type="submit"]:hover {
+  background-color: #CFA42D;
 }
 
 .parent3 {

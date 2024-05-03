@@ -34,15 +34,6 @@
           <a href="../web/Adopcion.html" class="botones"> Adopcion </a>
           <a href="../web/En vivo.html" class="botones"> En vivo </a>
           <a href="../web/Sobre nosotros.html" class="paginaboton"> Sobre nosotros </a>
-          <div class="dropdown">
-          <button class="botones dropbtn">Colabora</button> <!--dropbtn es una clase de CSS que se utiliza para estilizar un botón desplegable.-->
-              <div class="dropdown-content"> 
-              <a href="../web/Donar.html">Donar</a>
-              <a href="../web/Apadrina a un gatito.html">Apadrina un gatito</a>
-              <a href="../web/Ayudá en el refugio.html">Ayudá en el refugio</a>
-              <a href="../web/Transito de gatitos.html">Transito de gatitos</a>
-              </div>
-          </div>
         </aside>
     </div>
 
@@ -113,6 +104,23 @@
 <div class="contenedormotivacion"> <!--¿Que nos motiva?-->
   <p class="motivacion">¿Que nos motiva?</p>
   <p class="motivacionparrafo">En nuestro refugio para gatos, nos encontramos con una verdad simple pero poderosa: cada gato que entra por nuestras puertas lleva consigo una historia de lucha y supervivencia. Son criaturas que han conocido el abandono, el hambre y el frío, pero aquí encuentran un lugar donde la compasión y el cuidado son nuestra prioridad. Cada gato que rescatamos no solo recibe un techo sobre su cabeza, sino también una segunda oportunidad para experimentar el amor y la seguridad que tanto merecen. En este refugio, no solo nos dedicamos a alimentar cuerpos hambrientos, sino también a sanar corazones rotos y a brindar consuelo a aquellos que han sufrido. Somos una familia unida por nuestra devoción hacia estos seres vulnerables, y juntos trabajamos incansablemente para construir un futuro mejor para cada uno de ellos. En este lugar, la empatía y el compromiso son nuestras herramientas, y el amor incondicional por los gatos es nuestra fuerza motriz. ¡Sigamos adelante con determinación y compasión, sabiendo que cada vida que tocamos aquí marca la diferencia en el mundo de un gato! </p>
+</div>
+
+<div class="formulario">
+  <form id="contact-form" >
+    <input type="text" name="first_name" placeholder="Nombre" required>
+    <input type="text" name="last_name" placeholder="Apellido" required>
+    <input type="tel" name="phone" placeholder="Teléfono celular" required>
+    <input type="email" name="email" placeholder="Correo electrónico" required>
+    <select name="reason" required>
+      <option value="" disabled selected>Motivo de consulta</option>
+      <option value="Donacion">Ayuda Económica para el Refugio</option>
+      <option value="Voluntariado">Ayudar en el Refugio</option>
+      <option value="Donacion Material">Ayuda Material para el Refugio</option>
+    </select>
+    <textarea name="comment" placeholder="Escriba su comentario aquí" style="flex-grow: 0;"></textarea>
+    <a href="mailto:miyukisofi@gmail.com"><input type="submit" value="Enviar"></a>
+  </form>
 </div>
 
 <div class="parent3"> <!--Bloque de imagenes final y video-->
