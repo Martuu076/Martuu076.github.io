@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Titulo de la pagina-->
-    <title>Refugio Garritas</title>
-    <!--Icono de la pagina-->
-    <link rel="icon" href="../Imagenes/Logo V3.png" type="image/x-icon">
-    <!--Hoja de estilos-->
-    <link rel="stylesheet" type="text/css" href="../encabezados.css">
+  <meta charset="utf-8" />
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link al css del slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="../encabezados.css">
     <link rel="stylesheet" type="text/css" href="../Sobre nosotros.css">
 </head>
 
 <body>
-<div> <!-- Encabezados comunes-->
+  <div> <!-- Encabezados comunes-->
     <!-- Primer encabezado-->
     <div class="redessociales">
         <!-- Iconos de redes sociales, todavia no tienen vinculos-->
@@ -64,6 +63,30 @@
         </div>
       </div>
 </div>
-    
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img  class="imgs" src="../Imagenes/fondo1.jpg"><a href="link.html" class="textoo">Perro</a></div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <div class="contenedor">
+    <div class="imagen-circular"></div>
+    <div class="texto1">
+      <h1>CONÓCENOS</h1>
+      <p>Somos un equipo de personas impulsadas por la empatía hacia los animales reconocidos como nuestros semejantes debido a su capacidad para experimentar placer, dolor y sufrimiento.</p>
+      <a href="#" class="boton">VER MÁS</a>
+    </div>
+  </div>
+  <!-- Link al swiper js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/js"></script>
 </body>
+
 </html>
+
