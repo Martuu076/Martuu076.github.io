@@ -223,6 +223,7 @@
   align-items: center; 
   justify-content: center;
   margin-bottom: 1%;
+  visibility: hidden;
 }
 
 .formulario form {

@@ -10,7 +10,7 @@
 }
 
 .redessociales a:last-child{ /*Espacio del ultimo boton*/
-    margin-right: 20px
+    margin-right: 20px;
 }
 
 .redessociales img:hover {  /*Hover de las imagenes*/
