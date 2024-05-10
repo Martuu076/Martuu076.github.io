@@ -106,26 +106,28 @@
   <p class="motivacionparrafo">En nuestro refugio para gatos, nos encontramos con una verdad simple pero poderosa: cada gato que entra por nuestras puertas lleva consigo una historia de lucha y supervivencia. Son criaturas que han conocido el abandono, el hambre y el frío, pero aquí encuentran un lugar donde la compasión y el cuidado son nuestra prioridad. Cada gato que rescatamos no solo recibe un techo sobre su cabeza, sino también una segunda oportunidad para experimentar el amor y la seguridad que tanto merecen. En este refugio, no solo nos dedicamos a alimentar cuerpos hambrientos, sino también a sanar corazones rotos y a brindar consuelo a aquellos que han sufrido. Somos una familia unida por nuestra devoción hacia estos seres vulnerables, y juntos trabajamos incansablemente para construir un futuro mejor para cada uno de ellos. En este lugar, la empatía y el compromiso son nuestras herramientas, y el amor incondicional por los gatos es nuestra fuerza motriz. ¡Sigamos adelante con determinación y compasión, sabiendo que cada vida que tocamos aquí marca la diferencia en el mundo de un gato! </p>
 </div>
 
-<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-<script src="../JS/script.js"></script>
-<input type=button style="height: 8vh; width: 25vw; color:#003049; background-color:#EAE2B7; font-size: 1.5vw;" onclick="mostrarFormulario()" value="Quiero Colaborar con el Refugio"/>
-<div class="formulario" id="Formulario">
-  <form id="contact-form" >
-    <input type="text" name="first_name" placeholder="Nombre" required>
-    <input type="text" name="last_name" placeholder="Apellido" required>
-    <input type="tel" name="phone" placeholder="Teléfono celular" required>
-    <input type="email" name="email" placeholder="Correo electrónico" required>
-    <select name="reason" required>
-      <option value="" disabled selected>Forma de Colaboración</option>
-      <option value="Donacion">Ayuda Económica para el Refugio</option>
-      <option value="Voluntariado">Ayudar en el Refugio</option>
-      <option value="Donacion Material">Ayuda Material para el Refugio</option>
-    </select>
-    <textarea name="comment" placeholder="Escriba su comentario aquí" style="flex-grow: 0;"></textarea>
-    <a href="mailto:refugio_garritas@gmail.com"><input type="submit" value="Enviar"></a>
-    <input onclick="cerrarFormulario()" type="submit" value="Cancelar">
-  </form>
-</div>
+<div style="display: flex; flex-direction: column;">
+  <script src="../JS/script.js"></script>
+  <div class="contenedorBoton">
+    <input type=button class="botonF" onclick="mostrarFormulario()" value="Quiero Colaborar con el Refugio"/>
+  </div>
+  <div class="formulario" id="Formulario">
+    <form id="contact-form" >
+      <input type="text" name="first_name" placeholder="Nombre" required>
+      <input type="text" name="last_name" placeholder="Apellido" required>
+      <input type="tel" name="phone" placeholder="Teléfono celular" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <select name="reason" required>
+        <option value="" disabled selected>Forma de Colaboración</option>
+        <option value="Donacion">Ayuda Económica para el Refugio</option>
+        <option value="Voluntariado">Ayudar en el Refugio</option>
+        <option value="Donacion Material">Ayuda Material para el Refugio</option>
+      </select>
+      <textarea name="comment" placeholder="Escriba su comentario aquí" style="flex-grow: 0;"></textarea>
+      <a href="mailto:refugio_garritas@gmail.com"><input type="submit" value="Enviar"></a>
+      <input onclick="cerrarFormulario()" type="submit" value="Cancelar">
+    </form>
+  </div>
 </div>
 
 <div class="parent3"> <!--Bloque de imagenes final y video-->
