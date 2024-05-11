@@ -1,0 +1,31 @@
+.columnafiltro {
+    width: 240px;
+    background-color: #EAE2B7;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.tarjeta {
+    width: 300px;
+    border-radius: 10px;
+    margin: 35px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: row;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .tarjeta img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .titulo {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+  }
+
+  .descripcion {
+    font-size: 14px;
+  }
