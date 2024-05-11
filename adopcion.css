@@ -1,12 +1,45 @@
 .parent1 {
     display: grid;
-    grid-template-columns: 250px 85%;
+    grid-template-columns: 250px 75%;
     }
 .contenedorFiltros { 
     grid-area: 1/1/2/2;
+    background-color: #EAE2B7;
 }
 .contenedorGatitos {
     grid-area: 1/2/2/3;
     display: inline-block;
 }
-  
+
+.columnafiltro {
+    height: 100%;
+    background-color: #EAE2B7;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.tarjeta {
+    width: 300px;
+    border-radius: 10px;
+    margin-left: 35px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: row;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .tarjeta img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .titulo {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+  }
+
+  .descripcion {
+    font-size: 14px;
+  }
