@@ -1,3 +1,6 @@
+*{
+    margin: 0;
+}
 /*Primer encabezado*/
 /* redessociales es para los hipervinculos de las redes sociales*/
 .redessociales { 
@@ -170,7 +173,6 @@
     background-color: #D62828;
     padding: 10px 40px;
     display: inline-block;
-    float: left;
     margin-top: -16px;
 }
 
@@ -179,7 +181,7 @@
     font-family: "Bookman Old Style";
     color:#003049;
     font-size: 10px;
-    padding: 0px 10px;
+    padding: 8px 10px;
     line-height: 14px;
     border-bottom: 0.5px solid #EAE2B7;
 }
