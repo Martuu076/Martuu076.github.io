@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   position: relative;
   height: 100%;
 }
@@ -57,7 +56,7 @@ body {
     width: 300px; /* Tamaño igual al de la imagen de ejemplo */
     height: 300px; /* Tamaño igual al de la imagen de ejemplo */
     border-radius: 50%;
-    background-image: url('../imagenes/fondo1.jpg'); /* Reemplaza con la URL de tu imagen */
+    background-image: url('Imagenes/fondo1.jpg'); /* Reemplaza con la URL de tu imagen */
     background-size: cover;
     background-position: center;
   }
