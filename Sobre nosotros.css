@@ -230,7 +230,7 @@
   text-align: center;
   background-color:#EAE2B7;
   font-size: 120%;
-  line-height: 1.2;
+  border: 1px solid #000000;
 }
 
 .formulario{
@@ -292,7 +292,7 @@
     text-align: center;
     background-color:#EAE2B7;
     font-size: 120%;
-    line-height: 1.2;
+    border: 1px solid #000000;
   }
   
   .formulario{
@@ -354,7 +354,7 @@
     text-align: center;
     background-color:#EAE2B7;
     font-size: 100%;
-    line-height: 1.2;
+    border: 1px solid #000000;
   }
   
   .formulario{
