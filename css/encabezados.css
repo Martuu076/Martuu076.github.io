@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+}
+/*Primer encabezado*/
+/* redessociales es para los hipervinculos de las redes sociales*/
+.redessociales { 
+    background-color:#003049;
+    text-align: right;
+}
+.redessociales img {  /*Tamaño de las imagenes*/
+    margin: 5px 5px;
+    opacity: 0.7;
+}
+
+.redessociales a:last-child{ /*Espacio del ultimo boton*/
+    margin-right: 20px;
+}
+
+.redessociales img:hover {  /*Hover de las imagenes*/
+    margin: 5px 5px;
+    opacity: 1;
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out; /* Agrega transición suave para efecto de cambio de filtro y de transformación */
+    transform: scale(1.1); 
+}
+
+
+/*Menú, segundo encabezado*/
+.botoneramenu { /*Botonera del encabezado rojo*/
+    background-color: #D62828;}
+
+.item img { /*Imagen logo*/
+    margin-left: 20%;
+    margin-top: 2%;
+}
+
+.item img:hover { /*Imagen logo*/
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out; /* Agrega transición suave para efecto de cambio de filtro y de transformación */
+    transform: scale(1.05); 
+}
+
+@media only screen and (max-width: 800px) {
+    .item img {
+        width: 70%;
+        height: 70%;
+    }
+    }
+
+/*Fuente agregada*/
+@font-face {font-family: 'Oduda Bold';
+    src: url('/Fuentes/Oduda-Bold-Demo.otf') format('opentype');}
+
+
+.botoneramenu aside { /*Esto hace que los botones choquen hacia la derecha*/
+    display:flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    margin-right: 10px;
+}
+
+
+.botones {/*Formato de los botones*/
+    color: #003049;
+    margin: 0 5px; /* Espacio de 5px entre los botones */
+    font-family: 'Oduda Bold';
+    font-size: 20px;
+    background-color: #EAE2B7;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.paginaboton{ /*Formato de los botones*/
+    color: #EAE2B7;
+    margin: 0 5px; /* Espacio de 5px entre los botones */
+    font-family: 'Oduda Bold';
+    font-size: 20px;
+    background-color: #003049;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.botoneramenu a:last-child {  /*Elimina el margen derecho del último botón */
+    margin-right: 20px; 
+}
+ .botones:hover{ color: #EAE2B7; /*Hover de los botones*/
+    background-color: #003049;
+}
+
+
+/*Tercer encabezado*/
+.tercerencabezado {
+    background-color: #FCBF49;
+}
+
+
+.titulouno{ /*Titulo*/
+    display: inline-block;
+    margin-left:10px;
+    font-family: 'Oduda Bold';
+    color:#003049;
+    font-size: 25px;
+    padding-top: 30px;
+}
+
+
+.titulodos { /*Frase seguida al titulo*/
+    font-family: "Bookman Old Style";
+    color:#003049;
+    font-size: 20px;
+    line-height: 20px;
+    padding-bottom: 40px;
+    margin-right: 5px;
+}
+
+.texto .gatitouno { /*Primer imagen del gato*/
+    margin-top: 20px;
+    margin-left: 80px;
+    height:100px;
+}
+.texto .gatitodos, p {
+    display: inline-block;
+    vertical-align: top; /* Alinea la parte superior de la imagen con la del texto */
+}
+.texto .gatitodos{
+    height: 100px;
+    margin-top: 10px;
+}
+
+.busquedafiltrada h1 { /*sector busqueda filtrada*/
+    color: #FCBF49;
+    font-family: 'Oduda Bold';
+    font-size: 20px;
+    background-color: #D62828;
+    padding: 10px 40px;
+    display: inline-block;
+    margin-top: -16px;
+}
+
+
+.indice{ /*Indice*/
+    font-family: "Bookman Old Style";
+    color:#003049;
+    font-size: 10px;
+    padding: 8px 10px;
+    line-height: 14px;
+    border-bottom: 0.5px solid #EAE2B7;
+}
+
+.indice a{ /*Links del indice*/
+    text-decoration: none; 
+    color: #003049;
+}
+
+.indice a:hover{ /*Hover de los Links del indice*/
+    color: #FCBF49;
+}
+
+
+/*Boton desplegable*/
+
+button {
+    border: none; /* Elimina el borde por defecto de la etiqueta button */
+}
+
+.dropdown-content { /*El contenido que se despliega, formato del cuadrado*/
+    display: none;
+    position:absolute;
+    padding: 10px;
+    background-color: #EAE2B7;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {  /*El contenido que se despliega, hipervinculos*/
+    display: block;
+    font-family:"Bookman Old Style";
+    color: #003049;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .dropdown-content a:hover { /*El hover de los hipervinculos*/
+    background-color: #003049;
+    color: white;
+  }
+  
+  .dropdown:hover .dropdown-content { /*como se muestra el desplegable*/
+    display:block;
+  }
+
+/*Pie de pagina*/
+  footer{
+    background-color: #D62828;
+    text-align: right;
+}
+
+  footer img{ 
+    padding: 20px;
+    margin-right: 1%;
+}
+
+@media only screen and (max-width: 715px){
+    .titulouno{ /*Titulo*/
+        display: inline-block;
+        margin-left:10px;
+        font-family: 'Oduda Bold';
+        color:#003049;
+        font-size: 100%;
+        padding-top: 30px;
+    }
+    
+    
+    .titulodos { /*Frase seguida al titulo*/
+        font-family: "Bookman Old Style";
+        color:#003049;
+        font-size: 95%;
+        line-height: 20px;
+        padding-bottom: 4%;
+        margin-right: 5px;
+    }
+    
+    .texto .gatitouno { /*Primer imagen del gato*/
+        margin-top: 2%;
+        margin-left: 8%;
+        width: 15%;
+        height: 15%;
+    }
+    .texto .gatitodos, p {
+        display: inline-block;
+        vertical-align: top; /* Alinea la parte superior de la imagen con la del texto */
+    }
+    .texto .gatitodos{
+        width: 15%;
+        height: 15%;
+    }
+}
