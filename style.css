@@ -1,0 +1,91 @@
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  object-fit: cover;
+}
+
+    .swiper {
+    width: 100%;
+    height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+    .textoo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+}
+    .contenedor {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Aumenta la distancia entre la imagen y el texto */
+  }
+  .imagen-circular {
+    width: 300px; /* Tamaño igual al de la imagen de ejemplo */
+    height: 300px; /* Tamaño igual al de la imagen de ejemplo */
+    border-radius: 50%;
+    background-image: url('Imagenes/fondo1.jpg'); /* Reemplaza con la URL de tu imagen */
+    background-size: cover;
+    background-position: center;
+  }
+  .texto1 {
+    max-width: 400px; /* Aumenta el ancho máximo del texto */
+  }
+  .boton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+  .imgs{
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 768px) {
+    .imgs{
+
+    }
+    .contenedor {
+      flex-direction: column;
+    }
+    .imagen-circular,
+    .texto1 {
+      width: 80%; /* Ajuste para que la imagen y el texto ocupen la mayoría del ancho de pantalla en dispositivos móviles */
+    }
+  }
