@@ -118,6 +118,7 @@
    }
 }
 
+<<<<<<< HEAD
 .parent2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -128,6 +129,8 @@
   grid-area: 1/2/2/3;
   margin-left: 5%;
 }
+=======
+>>>>>>> origin
 
 @media only screen and (max-width: 1350px){
   .parent2 {
@@ -377,7 +380,12 @@
     height: 100%;
   }
   .yt { 
+
     grid-area: 1 / 2 / 3 / 3; 
+  }
+  .yt2{
+    width: 100%;
+    height: 100%;
   }
 
   @media only screen and (max-width: 950px) {
