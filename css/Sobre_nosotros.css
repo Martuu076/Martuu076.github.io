@@ -118,39 +118,6 @@
    }
 }
 
-.parent2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  }
-
-.cont_ig{
-  grid-area: 1/1/2/2;
-}
-
-.carrousel{  
-  border-radius: 5%;
-  margin-left: 20%;
-  width: 100%;
-  max-width: 350px;
-  overflow: hidden;
-}
-
-.instagram-media {
-  flex: 0 0 100%;
-}
-
-.carrousel .instagram-media {
-  border-radius: 5%;
-  width: 100%;
-  height: 90%;
-  object-fit: cover;
-}
-
-.contenedormaps{
-  grid-area: 1/2/2/3;
-  margin-left: 5%;
-}
 
 @media only screen and (max-width: 1350px){
   .parent2 {
@@ -159,29 +126,6 @@
     grid-template-rows: repeat(2, 1fr);
     place-items: center;
     }
-  
-  .cont_ig{
-    grid-area: 1/1/2/2;
-  }
-  
-  .carrousel{  
-    border-radius: 5%;
-    margin-right: 200px;
-    width: 100%;
-    max-width: 350px;
-    overflow: hidden;
-  }
-  
-  .instagram-media {
-    flex: 0 0 100%;
-  }
-  
-  .carrousel .instagram-media {
-    border-radius: 5%;
-    width: 100%;
-    height: 90%;
-    object-fit: cover;
-  }
   
   .contenedormaps{
     grid-area: 2/1/3/2;
@@ -228,13 +172,13 @@
 .contenedorBoton .botonF{
   width: 45%; 
   text-align: center;
-  background-color:#d82c2c;
+  background-color:#EAE2B7;
   font-size: 120%;
-  line-height: 1.2;
+  border: 1px solid #000000;
 }
 
 .formulario{
-  display: flex;
+  display: none;
   align-items: center; 
   justify-content: center;
   margin-bottom: 1%;
@@ -290,10 +234,9 @@
   .contenedorBoton .botonF{
     width: 65%; 
     text-align: center;
-    background-color:#d82c2c;
+    background-color:#EAE2B7;
     font-size: 120%;
-    line-height: 1.2;
-    color: white;
+    border: 1px solid #000000;
   }
   
   .formulario{
@@ -353,9 +296,9 @@
   .contenedorBoton .botonF{
     width: 65%; 
     text-align: center;
-    background-color:#d82c2c;
+    background-color:#EAE2B7;
     font-size: 100%;
-    line-height: 1.2;
+    border: 1px solid #000000;
   }
   
   .formulario{
@@ -424,7 +367,12 @@
     height: 100%;
   }
   .yt { 
+
     grid-area: 1 / 2 / 3 / 3; 
+  }
+  .yt2{
+    width: 100%;
+    height: 100%;
   }
 
   @media only screen and (max-width: 950px) {
