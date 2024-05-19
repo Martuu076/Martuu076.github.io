@@ -118,19 +118,6 @@
    }
 }
 
-<<<<<<< HEAD
-.parent2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  }
-
-.contenedormaps{
-  grid-area: 1/2/2/3;
-  margin-left: 5%;
-}
-=======
->>>>>>> origin
 
 @media only screen and (max-width: 1350px){
   .parent2 {
