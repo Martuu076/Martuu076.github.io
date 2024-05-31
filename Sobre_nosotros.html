@@ -9,7 +9,7 @@
     <link rel="icon" href="Imagenes/Logo_V3.png">
     <!--Hoja de estilos-->
     <link rel="stylesheet" href="css/encabezados.css">
-    <link rel="stylesheet" href="css/Sobre_nosotros.css">
+    <link rel="stylesheet" href="css/sobre_nosotros.css">
 </head>
 
 <body>
@@ -99,13 +99,18 @@
       <input type="text" name="last_name" placeholder="Apellido" required>
       <input type="tel" name="phone" placeholder="Teléfono celular" required>
       <input type="email" name="email" placeholder="Correo electrónico" required>
-      <select name="reason" required>
+      <select id="reason" onchange="showInp()" required>
         <option value="" disabled selected>Forma de Colaboración</option>
         <option value="Donacion">Ayuda Económica para el Refugio</option>
         <option value="Voluntariado">Ayudar en el Refugio</option>
         <option value="Donacion Material">Ayuda Material para el Refugio</option>
       </select>
-      <textarea name="comment" placeholder="Escriba su comentario aquí" style="flex-grow: 0;"></textarea>
+      <p id="eco" style="display:none; flex-direction: column; flex-grow: 0;">Donación por Mercado Pago: <br><a href="">LINK</a><br>Donación por BNA: <br><a href="">LINK</a><br>Donación por BancoCiudad: <br><a href="">LINK</a><br>Muchas Gracias :3. </p>
+      <textarea id="vol" style="display:none; flex-direction: column; flex-grow: 0;">Elimine los Días en los que No pueda asistir: Lunes-Martes-Miércoles-Jueves-Viernes-Sábado-Domingo 
+Indique Desde las 8am Hasta las 10pm el Horario en el que podría asistir(especificando el día correspondiente de ser necesario):  
+En breve nos contactaremos con usted para informarle la aceptación de su ayuda, muchas gracias :3.</textarea>
+      <textarea id="obj" style="display:none; flex-direction: column; flex-grow: 0;">Describa el objeto a donar, su estado y cantidad. 
+En breve nos contactaremos con usted para informarle el horario en el que puede pasar a dejarlo, muchas gracias :3.</textarea>
      <input type="submit" value="Enviar">
       <input onclick="cerrarFormulario()" type="submit" value="Cancelar">
     </form>
