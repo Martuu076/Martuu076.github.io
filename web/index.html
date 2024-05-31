@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <title>Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <!-- Link al css del slider -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" type="text/css" href="../encabezados.css">
-    <link rel="stylesheet" type="text/css" href="../Sobre nosotros.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/encabezados.css">
+    <link rel="stylesheet" type="text/css" href="css/Sobre_nosotros.css">
+  <link rel="icon" href="Imagenes/Logo_V3.png">
 </head>
 
 <body>
@@ -16,10 +17,10 @@
     <!-- Primer encabezado-->
     <div class="redessociales">
         <!-- Iconos de redes sociales, todavia no tienen vinculos-->
-        <a href="https://www.facebook.com/profile.php?id=61557043872535" target="_blank"><img src="../iconos/Facebook 1.png" height="30px" alt="Facebook"></a></img>
-        <a href="https://www.instagram.com/refugiogarritas_/" target="_blank"><img src="../iconos/instagram 1.png" height="30px" alt="instagram"></a></img>
-        <a href="https://wa.me/5401167981994?text=¡Hola!+Me+gustaria+contactarme+con+el+Refugio+Garritas." target="_blank"><img src="../iconos/Whatsapp 1.png" height="30px" alt="Whatsapp"></a></img>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=refugiogarritas@gmail.com&su=Refugio%20Garritas&body=%C2%A1Hola!%2C%20me%20gustaría%20contactarme%20con%20el%20Refugio%20Garritas."  target="_blank"><img src="../iconos/Gmail 1.png" height="30px" alt="Gmail"></a></img>
+        <a href="https://www.facebook.com/profile.php?id=61557043872535" target="_blank"><img src="iconos/Facebook_1.png" class="logo"  alt="Facebook"></a>
+        <a href="https://www.instagram.com/refugiogarritas_/" target="_blank"><img src="iconos/instagram_1.png" class="logo"  alt="instagram"></a>
+        <a href="https://wa.me/5401167981994?text=¡Hola!+Me+gustaria+contactarme+con+el+Refugio+Garritas." target="_blank"><img src="iconos/Whatsapp_1.png" class="logo" alt="Whatsapp"></a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=refugiogarritas@gmail.com&su=Refugio%20Garritas&body=%C2%A1Hola!%2C%20me%20gustaría%20contactarme%20con%20el%20Refugio%20Garritas."  target="_blank"><img src="iconos/Gmail_1.png" class="logo" alt="Gmail"></a>
     </div>
 
     <!-- Segundo Encabezado-->
@@ -27,40 +28,37 @@
     <!-- Tercer encabezado-->
     <div class="botoneramenu">
       <div class="item">
-        <a href="../web/Home.html"><img src="../Imagenes/LOGOv.png"></a></img>
-      </div>
+        <a href="index.html"><img src="Imagenes/LOGOv.png" alt="LOGOv"></a>
         <!-- Botones, agregar la clase "paginaboton" en el boton que este en la pagina seleccionada--> 
-        <aside> <!-- El aside es para la botonera-->
-          <a href="../web/Home.html" class="paginaboton"> Home </a>
-          <a href="../web/Adopcion.html" class="botones"> Adopcion </a>
-          <a href="../web/En vivo3.html" class="botones"> En vivo </a>
-          <a href="../web/Sobre nosotros.html" class="botones"> Sobre nosotros </a>
+        <aside class="menu_f"> <!-- El aside es para la botonera-->
+          <a href="index.html" class="paginaboton"> Home </a>
+          <a href="Adopcion.html" class="botones"> Adopcion </a>
+          <a href="En_vivo.html" class="botones"> En vivo </a>
+          <a href="Sobre_nosotros.html" class="botones"> Sobre nosotros </a>
         </aside>
     </div>
 
     <!-- Tercer encabezado-->
     <div class="tercerencabezado"> <!--Div madre-->
         <!-- Segundo div-->
-        <div class="texto">
-          <img src="../Imagenes/Gatito 1.png" class="gatitouno">
-          <p class="titulouno">Sobre el refugio <br> <step class="titulodos">Conocenos</step></p>
-          <img src="../Imagenes/Gatito 2.png" class="gatitodos">
+          <img src="Imagenes/Gatito_1.png" class="gatitouno" alt="gatito1">
+          <p class="titulouno">¡Bienvenid@!</p>
+          <img src="Imagenes/Gatito_2.png" class="gatitodos" alt="gatito2">
         </div>
-    </div>
       
       <!-- Cuarto encabezado-->
         <div class="indice">
-        <pre><h1>  <a href="../web/Home.html">Home</a> | <step style="background-color: #EAE2B7"> Home </step></h1></pre>
+       <h1><a href="index.html">Home</a></h1>
         </div>
-    
-</div>
+          </div>
+        </div>
   <!-- Swiper -->
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img  class="imgs" src="../Imagenes/fondo1.jpg"><a href="link.html" class="textoo">EN CONSTRUCCION</a></div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide"><img  class="imgs" src="Imagenes/fondo1.jpeg" alt="slider1"></div>
+      <div class="swiper-slide"><img  class="imgs" src="Imagenes/fondo2.jpeg" alt="slider2"></div>
+      <div class="swiper-slide"><img  class="imgs" src="Imagenes/fondo3.jpeg" alt="slider3"></div>
+      <div class="swiper-slide"><img  class="imgs" src="Imagenes/fondo4.jpeg" alt="slider4"></div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -68,15 +66,18 @@
   <div class="contenedor">
     <div class="imagen-circular"></div>
     <div class="texto1">
-      <h1>CONÓCENOS</h1>
-      <p>Somos un equipo de personas impulsadas por la empatía hacia los animales reconocidos como nuestros semejantes debido a su capacidad para experimentar placer, dolor y sufrimiento.</p>
-      <a href="../web/Sobre nosotros.html" class="boton">VER MÁS</a>
+      <h1>Sobre Nosotros</h1>
+      <p>Conocé nuestro Refugio, motivación y cómo unirte al proyecto.</p>
+      <a href="Sobre_nosotros.html" class="boton">VER MÁS</a>
     </div>
   </div>
+  <footer> <!--Footer-->
+    <img src="Imagenes/Logo_V2_Fondo_oscuro.png" alt="logo" class="logo2">
+  </footer>
   <!-- Link al swiper js -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="js/js"></script> <!-- falta archivo -->
+  <script src="JS/swiper-bundle.min.js"></script>
+  <script src="JS/swiper-bundle.min.js.map"></script>
+  <script src="JS/js.js"></script>
 </body>
-
 </html>
 
