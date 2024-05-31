@@ -15,6 +15,13 @@
 .redessociales a:last-child{ /*Espacio del ultimo boton*/
     margin-right: 20px;
 }
+.logo
+{
+    height: 30px;
+}
+.logo2{
+ height: 40px;
+}
 
 .redessociales img:hover {  /*Hover de las imagenes*/
     margin: 5px 5px;
@@ -47,7 +54,7 @@
 
 /*Fuente agregada*/
 @font-face {font-family: 'Oduda Bold';
-    src: url('/Fuentes/Oduda-Bold-Demo.otf') format('opentype');}
+    src: url('../Fuentes/Oduda-Bold-Demo.otf') format('opentype');}
 
 
 .botoneramenu aside { /*Esto hace que los botones choquen hacia la derecha*/
@@ -100,6 +107,7 @@
 .titulouno{ /*Titulo*/
     display: inline-block;
     margin-left:10px;
+    margin-top: 20px;
     font-family: 'Oduda Bold';
     color:#003049;
     font-size: 25px;
@@ -116,56 +124,19 @@
     margin-right: 5px;
 }
 
-.texto .gatitouno { /*Primer imagen del gato*/
+.gatitouno { /*Primer imagen del gato*/
     margin-top: 20px;
     margin-left: 80px;
     height:100px;
 }
-.texto .gatitodos, p {
+.gatitodos, p {
     display: inline-block;
     vertical-align: top; /* Alinea la parte superior de la imagen con la del texto */
 }
-.texto .gatitodos{
+.gatitodos{
     height: 100px;
     margin-top: 10px;
 }
-
-@media only screen and (max-width: 715px){
-    .titulouno{ /*Titulo*/
-        display: inline-block;
-        margin-left:10px;
-        font-family: 'Oduda Bold';
-        color:#003049;
-        font-size: 100%;
-        padding-top: 30px;
-    }
-    
-    
-    .titulodos { /*Frase seguida al titulo*/
-        font-family: "Bookman Old Style";
-        color:#003049;
-        font-size: 95%;
-        line-height: 20px;
-        padding-bottom: 4%;
-        margin-right: 5px;
-    }
-    
-    .texto .gatitouno { /*Primer imagen del gato*/
-        margin-top: 2%;
-        margin-left: 8%;
-        width: 15%;
-        height: 15%;
-    }
-    .texto .gatitodos, p {
-        display: inline-block;
-        vertical-align: top; /* Alinea la parte superior de la imagen con la del texto */
-    }
-    .texto .gatitodos{
-        width: 15%;
-        height: 15%;
-    }
-}
-
 .busquedafiltrada h1 { /*sector busqueda filtrada*/
     color: #FCBF49;
     font-family: 'Oduda Bold';
@@ -180,10 +151,10 @@
 .indice{ /*Indice*/
     font-family: "Bookman Old Style";
     color:#003049;
+    background-color: white;
     font-size: 10px;
     padding: 8px 10px;
     line-height: 14px;
-    border-bottom: 0.5px solid #EAE2B7;
 }
 
 .indice a{ /*Links del indice*/
@@ -239,4 +210,28 @@ button {
   footer img{ 
     padding: 20px;
     margin-right: 1%;
+}
+
+@media only screen and (max-width: 715px){
+    .titulouno{ /*Titulo*/
+        display: inline-block;
+        margin-left:10px;
+        font-family: 'Oduda Bold';
+        color:#003049;
+        font-size: 160%;
+    }   
+    .gatitouno { /*Primer imagen del gato*/
+        margin-top: 2%;
+        margin-left: 8%;
+        width: 20%;
+        height: 15%;
+    }
+    .gatitodos, p {
+        display: inline-block;
+        vertical-align: top; /* Alinea la parte superior de la imagen con la del texto */
+    }
+    .gatitodos{
+        width: 25%;
+        height: 15%;
+    }
 }

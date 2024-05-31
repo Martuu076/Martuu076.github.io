@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,58 +7,56 @@
     <!--Titulo de la pagina-->
     <title>Refugio Garritas</title>
     <!--Icono de la pagina-->
-    <link rel="icon" href="../Imagenes/Logo V3.png" type="image/x-icon">
+    <link rel="icon" href="Imagenes/Logo_V3.png" type="image/x-icon">
     <!--Hoja de estilos-->
-    <link rel="stylesheet" type="text/css" href="../encabezados.css">
-    <link rel="stylesheet" type="text/css" href="../adopcion.css">
+    <link rel="stylesheet" type="text/css" href="css/encabezados.css">
+    <link rel="stylesheet" type="text/css" href="css/adopcion.css">
 </head>
 
 
 <body>
     <!-- Primer encabezado-->
     <div class="redessociales">
-        <!-- Iconos de redes sociales, todavia no tienen vinculos-->
-        <a href="https://www.facebook.com/profile.php?id=61557043872535" target="_blank"><img src="../iconos/Facebook 1.png" height="30px" alt="Facebook"></a></img>
-        <a href="https://www.instagram.com/refugiogarritas_/" target="_blank"><img src="../iconos/instagram 1.png" height="30px" alt="instagram"></a></img>
-        <a href="https://wa.me/5401167981994?text=¡Hola!+Me+gustaria+contactarme+con+el+Refugio+Garritas." target="_blank"><img src="../iconos/Whatsapp 1.png" height="30px" alt="Whatsapp"></a></img>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=refugiogarritas@gmail.com&su=Refugio%20Garritas&body=%C2%A1Hola!%2C%20me%20gustaría%20contactarme%20con%20el%20Refugio%20Garritas."  target="_blank"><img src="../iconos/Gmail 1.png" height="30px" alt="Gmail"></a></img>
-    </div>
+      <!-- Iconos de redes sociales, todavia no tienen vinculos-->
+      <a href="https://www.facebook.com/profile.php?id=61557043872535" target="_blank"><img src="iconos/Facebook_1.png" class="logo"  alt="Facebook"></a>
+      <a href="https://www.instagram.com/refugiogarritas_/" target="_blank"><img src="iconos/instagram_1.png" class="logo"  alt="instagram"></a>
+      <a href="https://wa.me/5401167981994?text=¡Hola!+Me+gustaria+contactarme+con+el+Refugio+Garritas." target="_blank"><img src="iconos/Whatsapp_1.png" class="logo" alt="Whatsapp"></a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=refugiogarritas@gmail.com&su=Refugio%20Garritas&body=%C2%A1Hola!%2C%20me%20gustaría%20contactarme%20con%20el%20Refugio%20Garritas."  target="_blank"><img src="iconos/Gmail_1.png" class="logo" alt="Gmail"></a>
+  </div>
 
     <!-- Segundo Encabezado-->
     <div class="botoneramenu">
       <div class="item">
-        <a href="../web/Home.html"><img src="../Imagenes/LOGOv.png"></a></img>
+        <a href="index.html"><img src="Imagenes/LOGOv.png" alt="logo"></a>
       </div>
         <!-- Botones, agregar la clase "paginaboton" en el boton que este en la pagina seleccionada--> 
         <aside> <!-- El aside es para la botonera-->
-          <a href="../web/Home.html" class="botones"> Home </a>
-          <a href="../web/Adopcion.html" class="paginaboton"> Adopcion </a>
-          <a href="../web/En vivo3.html" class="botones"> En vivo </a>
-          <a href="../web/Sobre nosotros.html" class="botones"> Sobre nosotros </a>
+          <a href="index.html" class="botones"> Home </a>
+          <a href="Adopcion.html" class="paginaboton"> Adopcion </a>
+          <a href="En_vivo.html" class="botones"> En vivo </a>
+          <a href="Sobre_nosotros.html" class="botones"> Sobre nosotros </a>
         </aside>
     </div>
 
     <!-- Tercer encabezado-->
     <div class="tercerencabezado"> <!--Div madre-->
       <!-- Segundo div-->
-      <div class="texto">
-        <img src="../Imagenes/Gatito 1.png" class="gatitouno">
-        <p class="titulouno">Gatitos en Adopcion <br> <step class="titulodos">Adoptar es un acto de amor</step></p>
-        <img src="../Imagenes/Gatito 2.png" class="gatitodos">
-      </div>
-    </div>
+      <img src="Imagenes/Gatito_1.png" class="gatitouno" alt="gatito1">
+          <p class="titulouno">¡Adoptame!</p>
+          <img src="Imagenes/Gatito_2.png" class="gatitodos" alt="gatito2">
+        </div>
         <!-- Cuarto encabezado-->
-    <div class="indice">
-      <pre><h1>  <a href="../web/Home.html">Home</a> | <step style="background-color: #EAE2B7;"> Adopcion </step></h1></pre>
-    </div>
+        <div class="indice">
+          <h1><a href="index.html">Home</a> | Adopcion</h1>
+          </div>
 
     <!-- Cuarto encabezado-->
-  <div class="parent1" style="margin-top: 13px;">
-    <div class="contenedorFiltros" style="display: flex;flex-direction: column;">
-      <div class="busquedafiltrada" style="display: flex;flex-direction: column;">
-        <h1>Busqueda Filtrada</h1> 
+  <div class="parent1">
+    <div class="contenedorFiltros">
+      <div class="busquedafiltrada">
+        <h1>Busqueda de Filtros</h1> 
       </div>
-      <div class="columnafiltro" style="display: flex;flex-direction: column;">
+      <div class="columnafiltro">
         <form id="localidades">
           <label for="localidad"> Localidad:</label>
           <select name="localidad" id="localidad">
@@ -107,42 +105,45 @@
       </div>  
     </div>
     <div class="contenedorGatos">
-      <div class="tarjeta" style="display: inline-block;">
-        <img src="../Imagenes/Coral.png" id="Gato 1">
+      <div class="tarjeta">
+        <img src="Imagenes/Coral.png" alt="gato_1">
         <div class="titulo">Coral</div>
         <div class="descripcion">Juguetón y cariñoso.</div>
       </div>
-      <div class="tarjeta" style="display: inline-block;">
-        <img src="../Imagenes/Micho.png" id="Gato 2">
+      <div class="tarjeta">
+        <img src="Imagenes/Micho.png" alt="Gato_2">
         <div class="titulo">Micho</div>
         <div class="descripcion">Tímido al principio.</div>
       </div>
-      <div class="tarjeta" style="display: inline-block;">
-        <img src="../Imagenes/Nino.png" id="Gato 3">
+      <div class="tarjeta">
+        <img src="Imagenes/Nino.png" alt="Gato_3">
         <div class="titulo">Nino</div>
         <div class="descripcion">Verdadero explorador.</div>
       </div>
-      <div class="tarjeta" style="display: inline-block;">
-        <img src="../Imagenes/Nino.png" id="Gato 4">
+      <div class="tarjeta">
+        <img src="Imagenes/Nino.png" alt="Gato_4">
         <div class="titulo">Nino</div>
         <div class="descripcion">Verdadero explorador.</div>
       </div>
-      <div class="tarjeta" style="display: inline-block;">
-        <img src="../Imagenes/Coral.png" id="Gato 5">
+      <div class="tarjeta">
+        <img src="Imagenes/Coral.png" alt="Gato_5">
         <div class="titulo">Coral</div>
         <div class="descripcion">Juguetón y cariñoso.</div>
       </div>
-      <div class="tarjeta" style="display: inline-block;">
-        <img src="../Imagenes/Micho.png" id="Gato 6">
+      <div class="tarjeta">
+        <img src="Imagenes/Micho.png" alt="Gato_6">
         <div class="titulo">Micho</div>
         <div class="descripcion">Tímido al principio.</div>
       </div>
-      <div class="tarjeta" style="display: inline-block;">
-        <img src="../Imagenes/Nino.png" id="Gato 7">
+      <div class="tarjeta">
+        <img src="Imagenes/Nino.png" alt="Gato_7">
         <div class="titulo">Nino</div>
         <div class="descripcion">Verdadero explorador.</div>
       </div>
     </div>
   </div>
+  <footer> <!--Footer-->
+    <img src="Imagenes/Logo_V2_Fondo_oscuro.png" alt="logo" class="logo2">
+</footer>
 </body>
 </html>

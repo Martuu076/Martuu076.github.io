@@ -1,12 +1,12 @@
 function agregarFicha2(imagen,nombre,descripcion){
     document.write('<div class="ficha_cine">');
-    document.write('                    <img src="../Imagenes/borde_cine.png" width="200" alt="Banda de pelicula de cine">');  
+    document.write('                    <img src="Imagenes/borde_cine.png" width="200" alt="Banda de pelicula de cine">');  
     document.write('                    <img src="');
     document.write(imagen);
     document.write('" width="200" height="170" alt="Foto de Gatito llamado '+nombre+'">');  
-    document.write('                    <img src="../Imagenes/borde_cine.png" width="200" alt="Banda de pelicula de cine">'); 
+    document.write('                    <img src="Imagenes/borde_cine.png" width="200" alt="Banda de pelicula de cine">'); 
    /* document.write('                    <p><b>'+nombre+': </b>');*/
-    document.write('                    <div class="descripcion" title="'+descripcion+'"><b>'+nombre+': </b>'+descripcion+ '<a href="../web/Adopcion.html"> Adoptar </a> </div> ');
+    document.write('                    <div class="descripcion" title="'+descripcion+'"><b>'+nombre+': </b>'+descripcion+ '<a href="Adopcion.html"> Adoptar </a> </div> ');
     /*document.write('                    <a href="#">mas info...</a>');*/
     /*document.write('                    </p>');*/
     document.write('</div>');
@@ -15,7 +15,7 @@ function agregarFicha2(imagen,nombre,descripcion){
 //  agregarFicha();38
 //agrego varias fichas como si vinieran de un query (por ahora no se como hacerlo)
 
-const fotos = ["../Imagenes/Micho.png","../Imagenes/Coral.png","../Imagenes/Garfield.png","../Imagenes/Nino.png","../Imagenes/Turron.png","../Imagenes/Hunter.png","../Imagenes/Kimba.png","../Imagenes/Antonia.png","../Imagenes/Flaco.png","../Imagenes/Calamity James.png"];
+const fotos = ["Imagenes/Micho.png","Imagenes/Coral.png","Imagenes/Garfield.png","Imagenes/Nino.png","Imagenes/Turron.png","Imagenes/Hunter.png","Imagenes/Kimba.png","Imagenes/Antonia.png","Imagenes/Flaco.png","Imagenes/Calamity_James.png"];
 const nombres = ["Micho","Coral","Garfield","Nino","Turron","Hunter","Kimba","Antonia","Flaco","Calamity James"];
 const descripcion = [
   "Muy juguetón y cariñoso.",
