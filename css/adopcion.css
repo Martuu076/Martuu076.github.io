@@ -35,6 +35,12 @@ display: inline-block;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
+.tarjeta:hover { 
+  background-color: #EAE2B7;
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out; /* Agrega transición suave para efecto de cambio de filtro y de transformación */
+  transform: scale(1.05); 
+}
+
 .tarjeta img {
   width: 100%;
   border-radius: 10px;
@@ -48,4 +54,36 @@ display: inline-block;
 
 .descripcion {
   font-size: 14px;
+}
+
+.formulario{
+  display: none;
+  align-items: center; 
+  justify-content: center;
+  margin-bottom: 1%;
+}
+
+.formulario form {
+  width: 60vw; /* Ajusta el ancho del formulario al 90% del ancho de la ventana */
+  height: 60vh; /* Ajusta el alto del formulario al 90% del alto de la ventana */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex; /* Usa flexbox para el diseño */
+  flex-direction: column; /* Alinear elementos en columna */
+  justify-content: space-around; /* Distribuye los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+}
+.formulario input[type="text"], input[type="email"], input[type="tel"], input[type="reason"], input[type="submit"],input[type="button"] {
+  width: calc(100% - 20px); /* Ajusta el ancho para tener en cuenta el relleno */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.formulario input[type="submit"], input[type="button"] {
+  background-color: #EFBB14;
+  color: white;
+  width: 40vw;
+  cursor: pointer;
 }

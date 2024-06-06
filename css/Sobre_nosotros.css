@@ -227,7 +227,7 @@
   justify-content: space-around; /* Distribuye los elementos verticalmente */
   align-items: center; /* Centra los elementos horizontalmente */
 }
-.formulario input[type="text"], input[type="email"], textarea, select, input[type="tel"], input[type="submit"] {
+.formulario input[type="text"], input[type="button"],input[type="email"], textarea, select, input[type="tel"], input[type="submit"] {
   width: calc(100% - 20px); /* Ajusta el ancho para tener en cuenta el relleno */
   padding: 10px;
   border: 1px solid #ccc;
@@ -243,15 +243,11 @@
   box-sizing: border-box;
   resize: vertical; /* Permite redimensionar verticalmente */
 }
-.formulario a input[type="submit"] {
+.formulario input[type="submit"], input[type="button"] {
   background-color: #EFBB14;
   color: white;
-  border: none;
   width: 40vw;
   cursor: pointer;
-}
-.formulario a input[type="submit"]:hover {
-  background-color: #CFA42D;
 }
 
 @media only screen and (max-width: 750px){
@@ -291,7 +287,7 @@
     justify-content: space-around; /* Distribuye los elementos verticalmente */
     align-items: center; /* Centra los elementos horizontalmente */
   }
-  .formulario input[type="text"], input[type="email"], textarea, select, input[type="tel"], input[type="submit"] {
+  .formulario input[type="text"], input[type="button"],input[type="email"], textarea, select, input[type="tel"], input[type="submit"] {
     width: calc(100% - 20px); /* Ajusta el ancho para tener en cuenta el relleno */
     padding: 10px;
     border: 1px solid #ccc;
@@ -307,15 +303,11 @@
     box-sizing: border-box;
     resize: vertical; /* Permite redimensionar verticalmente */
   }
-  .formulario a input[type="submit"] {
+  .formulario input[type="submit"], input[type="button"] {
     background-color: #EFBB14;
     color: white;
-    border: none;
     width: 40vw;
     cursor: pointer;
-  }
-  .formulario a input[type="submit"]:hover {
-    background-color: #CFA42D;
   }
 }
 @media only screen and (max-width: 550px){
@@ -355,7 +347,7 @@
     justify-content: space-around; /* Distribuye los elementos verticalmente */
     align-items: center; /* Centra los elementos horizontalmente */
   }
-  .formulario input[type="text"], input[type="email"], textarea, select, input[type="tel"], input[type="submit"] {
+  .formulario input[type="text"], input[type="button"],input[type="email"], textarea, select, input[type="tel"], input[type="submit"] {
     width: calc(100% - 20px); /* Ajusta el ancho para tener en cuenta el relleno */
     padding: 10px;
     border: 1px solid #ccc;
@@ -371,15 +363,11 @@
     box-sizing: border-box;
     resize: vertical; /* Permite redimensionar verticalmente */
   }
-  .formulario a input[type="submit"] {
+  .formulario input[type="submit"], input[type="button"] {
     background-color: #EFBB14;
     color: white;
-    border: none;
     width: 40vw;
     cursor: pointer;
-  }
-  .formulario a input[type="submit"]:hover {
-    background-color: #CFA42D;
   }
 }
 

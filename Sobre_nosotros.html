@@ -91,7 +91,7 @@
 <div class="cont">
   <script src="JS/script.js"></script>
   <div class="contenedorBoton">
-    <button class="botonF" onclick="mostrarFormulario()">Quiero Colaborar con el Refugio</button>
+    <button class="botonF" onclick="mostrarFormulario(0)">Quiero Colaborar con el Refugio</button>
   </div>
   <div class="formulario" id="Formulario">
     <form id="contact-form" >
@@ -112,7 +112,7 @@ En breve nos contactaremos con usted para informarle la aceptación de su ayuda,
       <textarea id="obj" style="display:none; flex-direction: column; flex-grow: 0;">Describa el objeto a donar, su estado y cantidad. 
 En breve nos contactaremos con usted para informarle el horario en el que puede pasar a dejarlo, muchas gracias :3.</textarea>
      <input type="submit" value="Enviar">
-      <input onclick="cerrarFormulario()" type="submit" value="Cancelar">
+     <input type="button" onclick="cerrarFormulario()" value="Cancelar">
     </form>
   </div>
 </div>
