@@ -31,6 +31,7 @@
         <a href="index.html"><img src="Imagenes/LOGOv.png" alt="LOGOv"></a>
         <!-- Botones, agregar la clase "paginaboton" en el boton que este en la pagina seleccionada--> 
         <aside class="menu_f"> <!-- El aside es para la botonera-->
+          <button class="botones" onclick="mostrarFormulario(0)">Mantenimiento</button>
           <a href="index.html" class="paginaboton"> Home </a>
           <a href="Adopcion.html" class="botones"> Adopcion </a>
           <a href="En_vivo.html" class="botones"> En vivo </a>
@@ -48,7 +49,7 @@
       
       <!-- Cuarto encabezado-->
         <div class="indice">
-       <h1><a href="index.html">Home</a></h1>
+        <h1><a href="index.html">Home</a></h1>
         </div>
           </div>
         </div>
@@ -70,6 +71,14 @@
       <p>Conocé nuestro Refugio, motivación y cómo unirte al proyecto.</p>
       <a href="Sobre_nosotros.html" class="boton">VER MÁS</a>
     </div>
+  </div>
+  <div class="formulario" id="Formulario">
+    <form id="contact-form" >
+      <input type="text" name="usuario" placeholder="Usuario" required>
+      <input type="hidden" name="contraseña" placeholder="Contraseña" required>
+      <input type="submit" onclick="redireccionar()" value="Enviar">
+      <input type="button" onclick="cerrarFormulario()" value="Cancelar">
+    </form>
   </div>
   <footer> <!--Footer-->
     <img src="Imagenes/Logo_V2_Fondo_oscuro.png" alt="logo" class="logo2">
