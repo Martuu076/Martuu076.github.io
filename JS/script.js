@@ -112,3 +112,12 @@ function showInp(){
     document.getElementById("obj").style.display = "flex";
   }
 }
+
+function redireccionar(){
+  var usu= document.getElementById("usuario").value;
+  var pass= document.getElementById("contraseña").value;
+  if(usu=="admin" && pass=="1234")
+  {
+    window.location.href = "back.html";
+  }
+}

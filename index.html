@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/encabezados.css">
-    <link rel="stylesheet" type="text/css" href="css/sobre_nosotros.css">
   <link rel="icon" href="Imagenes/Logo_V3.png">
 </head>
 
@@ -31,6 +30,7 @@
         <a href="index.html"><img src="Imagenes/LOGOv.png" alt="LOGOv"></a>
         <!-- Botones, agregar la clase "paginaboton" en el boton que este en la pagina seleccionada--> 
         <aside class="menu_f"> <!-- El aside es para la botonera-->
+          <script src="JS/script.js"></script>
           <button class="botones" onclick="mostrarFormulario(0)">Mantenimiento</button>
           <a href="index.html" class="paginaboton"> Home </a>
           <a href="Adopcion.html" class="botones"> Adopcion </a>
@@ -74,9 +74,9 @@
   </div>
   <div class="formulario" id="Formulario">
     <form id="contact-form" >
-      <input type="text" name="usuario" placeholder="Usuario" required>
-      <input type="hidden" name="contraseña" placeholder="Contraseña" required>
-      <input type="submit" onclick="redireccionar()" value="Enviar">
+      <input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
+      <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required>
+      <input type="button" onclick="redireccionar()" value="Enviar">
       <input type="button" onclick="cerrarFormulario()" value="Cancelar">
     </form>
   </div>

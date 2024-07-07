@@ -5,36 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar producto</title>
+    <title>Agregar gatito</title>
     <link rel="stylesheet" href="./static/css/estilos.css">
 </head>
 
 <body>
     <div class="logo-centrado">
-        <img src="./static/imagenes/logo_Codo.jpg" alt="logo">
+        <a href="../../index.html"><img src="../../Imagenes/LOGOv.png" alt="LOGOv"></a>
     </div>
-    <h1>Agregar Productos al Inventario</h1><br>
+    <h1>Agregar datos de un gatito</h1><br>
 
     <form id="formulario" enctype="multipart/form-data"> <!-- enctype="multipart/form-data" es necesario para enviar archivos al back. Se usa este para enviar datos y archivos -->
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="descripcion" required><br>
 
         <label for="descripcion">Descripción:</label>
         <input type="text" id="descripcion" name="descripcion" required><br>
 
-        <label for="cantidad">Cantidad:</label>
-        <input type="number" id="cantidad" name="cantidad" required><br>
+        <label for="imagen">Imagen del gatito:</label>
+        <input type="file" id="imagen" name="imagen">
 
-        <label for="precio">Precio:</label>
-        <input type="number" step="0.01" id="precio" name="precio" required><br>
-
-        <label for="imagenProducto">Imagen del producto:</label>
-        <input type="file" id="imagenProducto" name="imagen">
-
-        <br><br>
-        <label for="proveedorProducto">Proveedor:</label>
-        <input type="text" id="proveedorProducto" name="proveedor">
-
-        <button type="submit">Agregar Producto</button>
-        <a href="index.html">Menu principal</a>
+        <button type="submit">Agregar Gatito</button>
+        <a href="../../back.html">Menu principal</a>
     </form>
 
     <script>
@@ -51,7 +44,7 @@
             var formData = new FormData(this);
 
             // Realizamos la solicitud POST al servidor
-            fetch(URL + 'productos', { // fetcheamos a la URL con el método POST (usamos la variable URL definida antes para poder colocar despues solo el nombre del decorador de la ruta en el servidor, en este caso productos)
+            fetch(URL + 'gatitos', { // fetcheamos a la URL con el método POST (usamos la variable URL definida antes para poder colocar despues solo el nombre del decorador de la ruta en el servidor, en este caso productos)
                 method: 'POST',
                 body: formData // Aquí enviamos formData. Dado que formData puede contener archivos, no se utiliza JSON.
             })
@@ -64,27 +57,25 @@
                     } else {
                         // Si hubo un error, lanzar explícitamente una excepción
                         // para ser "catcheada" más adelante
-                        throw new Error('Error al agregar el producto.');
+                        throw new Error('Error al agregar el gatito.');
                     }
                 })
 
                 //Respuesta OK, muestra una alerta informando que el producto se agregó correctamente y limpia los campos del formulario para que puedan ser utilizados para un nuevo producto.
                 .then(function (data) {
-                    alert('Producto agregado correctamente.');
+                    alert('Gatito agregado correctamente.');
                 })
 
                 // En caso de error, mostramos una alerta con un mensaje de error.
                 .catch(function (error) {
-                    alert('Error al agregar el producto.');
+                    alert('Error al agregar el gatito.');
                 })
 
                 // Limpiar el formulario en ambos casos (éxito o error)
                 .finally(function () {
+                    document.getElementById('nombre').value = "";
                     document.getElementById('descripcion').value = "";
-                    document.getElementById('cantidad').value = "";
-                    document.getElementById('precio').value = "";
-                    document.getElementById('imagenProducto').value = "";
-                    document.getElementById('proveedorProducto').value = "";
+                    document.getElementById('imagen').value = "";
                 });
         })
     </script>

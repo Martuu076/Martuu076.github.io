@@ -5,8 +5,8 @@
 }
 
 body {
-    background-color: lightskyblue;
-    color:white;
+    background-color:#EAE2B7;
+    color:#D62828;
 }
 
 .contenedor-centrado {
@@ -26,6 +26,9 @@ body {
 
 .logo-centrado img {
     border-radius: 10px;
+    width: 90%;
+    height: 90%;
+    margin-left: 25px;
 }
 
 .navbar-index{
@@ -69,7 +72,7 @@ form {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #1d1a39;
+    background-color: #FCBF49;
     border: 1px solid lightslategray;
     border-radius: 5px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
@@ -80,7 +83,7 @@ table {
     max-width: 90%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #1d1a39;
+    background-color: #FCBF49;
     border: 1px solid lightslategray;
     border-radius: 5px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
@@ -132,9 +135,8 @@ button:hover {
 a {
     padding: 8px;
     margin:4px;
-    background-color: rgb(248, 202, 53);
+    background-color:#d46b6b;
     color: #1d1a39;
-    border: 2px #1d1a39 dashed;
     border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
