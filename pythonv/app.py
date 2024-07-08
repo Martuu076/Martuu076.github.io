@@ -60,7 +60,7 @@ class Catalogo:
 
     def consultar_gatito(self, id_gatito):
         # Consultamos un producto a partir de su código
-        self.cursor.execute(f"SELECT * FROM gatitos WHERE gatitos = {id_gatito}")
+        self.cursor.execute(f"SELECT * FROM gatitos WHERE id_gatito = {id_gatito}")
         return self.cursor.fetchone()
 
     def mostrar_gatito(self, id_gatito):
