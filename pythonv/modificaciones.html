@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Gatito</title>
+    <link rel="stylesheet" href="./static/css/estilos.css">
+    <link rel="icon" href="../Imagenes/Logo_V3.png">
+</head>
+
+<body>
+    <div class="logo-centrado">
+        <a href="../index.html"><img src="../Imagenes/LOGOv.png" alt="LOGOv"></a>
+    </div>
+    <h1>Modificar datos de un gatito</h1><br>
+
+    <!-- Contenedor principal que será controlado por JavaScript. Este contenedor tendrá dos formularios. -->
+    <div id="app">
+        <!-- Primer formulario: Selector de producto. LLama a la función obtenerProducto cuando se envíe el formulario -->
+        <form id="form-obtener-gatito">
+            <label for="id_gatito">id_gatito:</label>
+            <input type="text" id="id_gatito" required><br>
+            <button type="submit">Modificar Gatito</button> <a href="../back.html">Menu principal</a>
+        </form>
+
+        <!-- Segundo formulario: se muestra solo si mostrarDatosProducto es verdadero. Llama a la función guardarCambios -->
+        <div id="datos-gatito" style="display: none;">
+            <h2>Datos del Gatito</h2>
+            <form id="form-guardar-cambios">
+                <label for="nombreModificar">Nombre:</label>
+                <input type="text" id="nombreModificar" required><br>
+
+                <label for="descripcionModificar">Descripción:</label>
+                <input type="text" id="descripcionModificar" required><br>
+
+                <!-- Input para nueva imagen -->
+                <label for="nuevaImagen">Nueva Imagen:</label>
+                <input type="file" id="nuevaImagen"><br>
+
+                <button type="submit">Guardar Cambios</button>
+                <a href="modificaciones.html">Cancelar</a>
+            </form>
+        </div>
+    </div>
+    <script>
+        //const URL = "http://127.0.0.1:5000/" // Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
+
+        const URL = "https://saporapo.pythonanywhere.com/"
+
+
+        // Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
+        //const URL = "https://USUARIO.pythonanywhere.com/"
+
+        // Variables de estado para controlar la visibilidad y los datos del formulario
+        let id_gatito = '';
+        let nombre = '';
+        let descripcion = '';
+        let imagen = '';
+        let imagenSeleccionada = null;
+        let imagenTemp = null;
+        let mostrarDatosGatito= false;
+
+        document.getElementById('form-obtener-gatito').addEventListener('submit', obtenerGatito);
+        document.getElementById('form-guardar-cambios').addEventListener('submit', guardarCambios);
+        document.getElementById('nuevaImagen').addEventListener('change', seleccionarImagen);
+
+        // Se ejecuta cuando se envía el formulario de consulta. Realiza una solicitud GET a la API y obtiene los datos del producto correspondiente al código ingresado.
+        function obtenerGatito(event) {
+            event.preventDefault();
+            id_gatito = document.getElementById('id_gatito').value;
+            fetch(URL + 'gatitos/' + id_gatito)
+                .then(response => {
+                    if (response.ok) {
+                        return response.json()
+                    } else {
+                        throw new Error('Error al obtener los datos del gatito.')
+                    }
+                })
+                .then(data => {
+                    nombre=data.nombre;
+                    descripcion = data.descripcion;
+                    imagen = data.imagen;
+                    mostrarDatosGatito = true; //Activa la vista del segundo formulario
+                    mostrarFormulario();
+                })
+                .catch(error => {
+                    alert('id_gatito no encontrado.');
+                });
+        }
+
+        // Muestra el formulario con los datos del producto
+        function mostrarFormulario() {
+            if (mostrarDatosGatito) {
+                document.getElementById('nombreModificar').value = nombre;
+                document.getElementById('descripcionModificar').value = descripcion;
+
+                const imagenActual = document.getElementById('imagen-actual');
+                if (imagen && !imagenSeleccionada) { // Verifica si imagen_url no está vacía y no se ha seleccionado una imagen
+                    
+                    //imagenActual.src = './static/imagenes/' + imagen_url;   
+                    //https://saporapo.pythonanywhere.com                               
+                    //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
+                    
+                    imagenActual.src = 'https://saporapo.pythonanywhere.com/' + imagen;
+                    imagenActual.style.display = 'block'; // Muestra la imagen actual
+                } else {
+                    imagenActual.style.display = 'none'; // Oculta la imagen si no hay URL
+                }
+
+                document.getElementById('datos-gatito').style.display = 'block';
+            } else {
+                document.getElementById('datos-gatito').style.display = 'none';
+            }
+        }
+
+        // Se activa cuando el usuario selecciona una imagen para cargar.
+        function seleccionarImagen(event) {
+            const file = event.target.files[0];
+            imagenSeleccionada = file;
+            imagenTemp = URL.createObjectURL(file); // Crea una URL temporal para la vista previa
+
+            const imagenVistaPrevia = document.getElementById('imagen-vista-previa');
+            imagenVistaPrevia.src = imagenTemp;
+            imagenVistaPrevia.style.display = 'block';
+        }
+
+        // Se usa para enviar los datos modificados del producto al servidor.
+        function guardarCambios(event) {
+            event.preventDefault();
+
+            const formData = new FormData();
+            formData.append('id_gatito', id_gatito);
+            formData.append('nombre', document.getElementById('nombreModificar').value);
+            formData.append('descripcion', document.getElementById('descripcionModificar').value);
+
+            // Si se ha seleccionado una imagen nueva, la añade al formData. 
+            if (imagenSeleccionada) {
+                formData.append('imagen', imagenSeleccionada, imagenSeleccionada.name);
+            }
+
+            fetch(URL + 'gatitos/' + id_gatito, {
+                method: 'PUT',
+                body: formData,
+            })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json()
+                    } else {
+                        throw new Error('Error al guardar los cambios del gatito.')
+                    }
+                })
+                .then(data => {
+                    alert('Gatito actualizado correctamente.');
+                    limpiarFormulario();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error al actualizar el gatito.');
+                });
+        }
+
+        // Restablece todas las variables relacionadas con el formulario a sus valores iniciales, lo que efectivamente "limpia" el formulario.
+        function limpiarFormulario() {
+            document.getElementById('id_gatito').value = '';
+            document.getElementById('nombreModificar').value = '';
+            document.getElementById('descripcionModificar').value = '';
+            document.getElementById('nuevaImagen').value = '';
+
+            const imagenActual = document.getElementById('imagen-actual');
+            imagenActual.style.display = 'none';
+
+            const imagenVistaPrevia = document.getElementById('imagen-vista-previa');
+            imagenVistaPrevia.style.display = 'none';
+
+            id_gatito = '';
+            nombre = '';
+            descripcion = '';
+            imagen = '';
+            imagenSeleccionada = null;
+            imagenTemp = null;
+            mostrarDatosGatito = false;
+
+            document.getElementById('datos-gatito').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

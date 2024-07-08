@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar gatito</title>
+    <link rel="stylesheet" href="./static/css/estilos.css">
+    <link rel="icon" href="../Imagenes/Logo_V3.png">
+</head>
+
+<body>
+    <div class="logo-centrado">
+        <a href="../index.html"><img src="../Imagenes/LOGOv.png" alt="LOGOv"></a>
+    </div>
+    <h1>Agregar datos de un gatito</h1><br>
+
+    <form id="formulario" enctype="multipart/form-data"> <!-- enctype="multipart/form-data" es necesario para enviar archivos al back. Se usa este para enviar datos y archivos -->
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="descripcion">Descripción:</label>
+        <input type="text" id="descripcion" name="descripcion" required><br>
+
+        <label for="imagen">Imagen del gatito:</label>
+        <input type="file" id="imagen" name="imagen">
+
+        <button type="submit">Agregar Gatito</button>
+        <a href="../back.html">Menu principal</a>
+    </form>
+
+    <script>
+
+        // const URL = "http://127.0.0.1:5000/" // Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
+
+        const URL = "https://saporapo.pythonanywhere.com/"
+
+
+        // Capturamos el evento de envío del formulario
+        document.getElementById('formulario').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evitamos que se envie el form 
+
+            var formData = new FormData(this);
+
+            // Realizamos la solicitud POST al servidor
+            fetch(URL + 'gatitos', { // fetcheamos a la URL con el método POST (usamos la variable URL definida antes para poder colocar despues solo el nombre del decorador de la ruta en el servidor, en este caso productos)
+                method: 'POST',
+                body: formData // Aquí enviamos formData. Dado que formData puede contener archivos, no se utiliza JSON.
+            })
+
+                //Después de realizar la solicitud POST, se utiliza el método then() para manejar la respuesta del servidor.
+                .then(function (response) {
+                    if (response.ok) {
+                        //Si la respuesta es exitosa, convierte los datos de la respuesta a formato JSON.
+                        return response.json();
+                    } else {
+                        // Si hubo un error, lanzar explícitamente una excepción
+                        // para ser "catcheada" más adelante
+                        throw new Error('Error al agregar el gatito.');
+                    }
+                })
+
+                //Respuesta OK, muestra una alerta informando que el producto se agregó correctamente y limpia los campos del formulario para que puedan ser utilizados para un nuevo producto.
+                .then(function (data) {
+                    alert('Gatito agregado correctamente.');
+                })
+
+                // En caso de error, mostramos una alerta con un mensaje de error.
+                .catch(function (error) {
+                    alert('Error al agregar el gatito.');
+                })
+
+                // Limpiar el formulario en ambos casos (éxito o error)
+                .finally(function () {
+                    document.getElementById('nombre').value = "";
+                    document.getElementById('descripcion').value = "";
+                    document.getElementById('imagen').value = "";
+                });
+        })
+    </script>
+</body>
+
+</html>
