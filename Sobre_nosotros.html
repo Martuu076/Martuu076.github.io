@@ -9,7 +9,7 @@
     <link rel="icon" href="Imagenes/Logo_V3.png">
     <!--Hoja de estilos-->
     <link rel="stylesheet" href="css/encabezados.css">
-    <link rel="stylesheet" href="css/Sobre_nosotros.css">
+    <link rel="stylesheet" href="css/sobre_nosotros.css">
 </head>
 
 <body>
@@ -79,21 +79,19 @@
     </div>
 </div> 
 <!--Contenedor de instagram y maps-->
-  <div class="parent2">
-    <div class="contenedormaps"> <!--Maps-->
-        <embed src="https://www.google.com/maps/d/embed?mid=11J-u0E8LXyIp_hLteqZLPiaNjbi0xLo&ehbc=2E312F" width="555" height="445">
-    </div>
-  </div>
+<div class="contenedormaps"> <!--Maps-->
+    <embed class="maps" src="https://www.google.com/maps/d/embed?mid=11J-u0E8LXyIp_hLteqZLPiaNjbi0xLo&ehbc=2E312F">
+</div>
 
 <div class="contenedormotivacion"> <!--¿Que nos motiva?-->
   <p class="motivacion">¿Que nos motiva?</p>
   <p class="motivacionparrafo">En nuestro refugio para gatos, nos encontramos con una verdad simple pero poderosa: cada gato que entra por nuestras puertas lleva consigo una historia de lucha y supervivencia. Son criaturas que han conocido el abandono, el hambre y el frío, pero aquí encuentran un lugar donde la compasión y el cuidado son nuestra prioridad. Cada gato que rescatamos no solo recibe un techo sobre su cabeza, sino también una segunda oportunidad para experimentar el amor y la seguridad que tanto merecen. En este refugio, no solo nos dedicamos a alimentar cuerpos hambrientos, sino también a sanar corazones rotos y a brindar consuelo a aquellos que han sufrido. Somos una familia unida por nuestra devoción hacia estos seres vulnerables, y juntos trabajamos incansablemente para construir un futuro mejor para cada uno de ellos. En este lugar, la empatía y el compromiso son nuestras herramientas, y el amor incondicional por los gatos es nuestra fuerza motriz. ¡Sigamos adelante con determinación y compasión, sabiendo que cada vida que tocamos aquí marca la diferencia en el mundo de un gato! </p>
 </div>
 
-<div style="display: flex; flex-direction: column;">
-  <script src="../JS/script.js"></script>
+<div class="cont">
+  <script src="JS/script.js"></script>
   <div class="contenedorBoton">
-    <button class="botonF" onclick="mostrarFormulario()">Quiero Colaborar con el Refugio</button>
+    <button class="botonF" onclick="mostrarFormulario(0)">Quiero Colaborar con el Refugio</button>
   </div>
   <div class="formulario" id="Formulario">
     <form id="contact-form" >
@@ -101,15 +99,20 @@
       <input type="text" name="last_name" placeholder="Apellido" required>
       <input type="tel" name="phone" placeholder="Teléfono celular" required>
       <input type="email" name="email" placeholder="Correo electrónico" required>
-      <select name="reason" required>
+      <select id="reason" onchange="showInp()" required>
         <option value="" disabled selected>Forma de Colaboración</option>
         <option value="Donacion">Ayuda Económica para el Refugio</option>
         <option value="Voluntariado">Ayudar en el Refugio</option>
         <option value="Donacion Material">Ayuda Material para el Refugio</option>
       </select>
-      <textarea name="comment" placeholder="Escriba su comentario aquí" style="flex-grow: 0;"></textarea>
+      <p id="eco" style="display:none; flex-direction: column; flex-grow: 0;">Donación por Mercado Pago: <br><a href="">LINK</a><br>Donación por BNA: <br><a href="">LINK</a><br>Donación por BancoCiudad: <br><a href="">LINK</a><br>Muchas Gracias :3. </p>
+      <textarea id="vol" style="display:none; flex-direction: column; flex-grow: 0;">Elimine los Días en los que No pueda asistir: Lunes-Martes-Miércoles-Jueves-Viernes-Sábado-Domingo 
+Indique Desde las 8am Hasta las 10pm el Horario en el que podría asistir(especificando el día correspondiente de ser necesario):  
+En breve nos contactaremos con usted para informarle la aceptación de su ayuda, muchas gracias :3.</textarea>
+      <textarea id="obj" style="display:none; flex-direction: column; flex-grow: 0;">Describa el objeto a donar, su estado y cantidad. 
+En breve nos contactaremos con usted para informarle el horario en el que puede pasar a dejarlo, muchas gracias :3.</textarea>
      <input type="submit" value="Enviar">
-      <input onclick="cerrarFormulario()" type="submit" value="Cancelar">
+     <input type="button" onclick="cerrarFormulario()" value="Cancelar">
     </form>
   </div>
 </div>

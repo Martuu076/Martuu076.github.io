@@ -51,12 +51,12 @@
           </div>
 
     <!-- Cuarto encabezado-->
-  <div class="parent1" style="margin-top: 13px;">
-    <div class="contenedorFiltros" style="display: flex;flex-direction: column;">
-      <div class="busquedafiltrada" style="display: flex;flex-direction: column;">
-        <h1>Busqueda Filtrada</h1> 
+  <div class="parent1">
+    <div class="contenedorFiltros">
+      <div class="busquedafiltrada">
+        <h1>Busqueda de Filtros</h1> 
       </div>
-      <div class="columnafiltro" style="display: flex;flex-direction: column;">
+      <div class="columnafiltro">
         <form id="localidades">
           <label for="localidad"> Localidad:</label>
           <select name="localidad" id="localidad">
@@ -104,41 +104,67 @@
         </form>
       </div>  
     </div>
+    <script src="JS/script.js"></script>
     <div class="contenedorGatos">
-      <div class="tarjeta" style="display: inline-block;">
-        <img src="Imagenes/Coral.png" alt="gato_1">
-        <div class="titulo">Coral</div>
-        <div class="descripcion">Juguetón y cariñoso.</div>
-      </div>
-      <div class="tarjeta" style="display: inline-block;">
-        <img src="Imagenes/Micho.png" alt="Gato_2">
-        <div class="titulo">Micho</div>
+      <div class="tarjeta" onclick="mostrarFormulario(1)">
+        <img src="Imagenes/Micho.png" alt="Gato_1">
+        <div class="titulo" value="1">Micho</div>
         <div class="descripcion">Tímido al principio.</div>
       </div>
-      <div class="tarjeta" style="display: inline-block;">
+      <div class="tarjeta" onclick="mostrarFormulario(2)">
+        <img src="Imagenes/Coral.png" alt="gato_2">
+        <div class="titulo" value="2">Coral</div>
+        <div class="descripcion">Juguetón y cariñoso.</div>
+      </div>
+      <div class="tarjeta" onclick="mostrarFormulario(3)">
         <img src="Imagenes/Nino.png" alt="Gato_3">
-        <div class="titulo">Nino</div>
+        <div class="titulo" value="3">Nino</div>
         <div class="descripcion">Verdadero explorador.</div>
       </div>
-      <div class="tarjeta" style="display: inline-block;">
-        <img src="Imagenes/Nino.png" alt="Gato_4">
-        <div class="titulo">Nino</div>
-        <div class="descripcion">Verdadero explorador.</div>
+      <div class="tarjeta" onclick="mostrarFormulario(4)">
+        <img src="Imagenes/Garfield.png" alt="Gato_4">
+        <div class="titulo" value="4">Garfield</div>
+        <div class="descripcion">Le gusta ser el centro de atencion.</div>
       </div>
-      <div class="tarjeta" style="display: inline-block;">
-        <img src="Imagenes/Coral.png" alt="Gato_5">
-        <div class="titulo">Coral</div>
-        <div class="descripcion">Juguetón y cariñoso.</div>
+      <div class="tarjeta" onclick="mostrarFormulario(5)">
+        <img src="Imagenes/Turron.png" alt="Gato_5">
+        <div class="titulo" value="5">Turron</div>
+        <div class="descripcion">Es un dulce, todo amoroso.</div>
       </div>
-      <div class="tarjeta" style="display: inline-block;">
-        <img src="Imagenes/Micho.png" alt="Gato_6">
-        <div class="titulo">Micho</div>
-        <div class="descripcion">Tímido al principio.</div>
+      <div class="tarjeta" onclick="mostrarFormulario(6)">
+        <img src="Imagenes/hunter.png" alt="Gato_6">
+        <div class="titulo" value="6">hunter</div>
+        <div class="descripcion">Vive trepado en algun mueble.</div>
       </div>
-      <div class="tarjeta" style="display: inline-block;">
-        <img src="Imagenes/Nino.png" alt="Gato_7">
-        <div class="titulo">Nino</div>
-        <div class="descripcion">Verdadero explorador.</div>
+      <div class="tarjeta" onclick="mostrarFormulario(7)">
+        <img src="Imagenes/Kimba.png" alt="Gato_7">
+        <div class="titulo" value="7">Kimba</div>
+        <div class="descripcion">Dormilon como un snorlax.</div>
+      </div>
+      <div class="formulario" id="Formulario">
+        <form id="contact-form" >
+          <input type="text" name="first_name" placeholder="Nombre" required>
+          <input type="text" name="last_name" placeholder="Apellido" required>
+          <input type="tel" name="phone" placeholder="Teléfono celular" required>
+          <input type="email" name="email" placeholder="Correo electrónico" required>
+          <input type="reason" value="Adopcion" disabled>
+          <img id="1" src="Imagenes/Micho.png" style="display:none; flex-direction: column;">
+          <p id="a" style="display:none; flex-direction: column;">Micho</p>
+          <img id="2" src="Imagenes/Coral.png" style="display:none; flex-direction: column;">
+          <p id="b" style="display:none; flex-direction: column;">Coral</p>
+          <img id="3" src="Imagenes/Nino.png" style="display:none; flex-direction: column;">
+          <p id="c" style="display:none; flex-direction: column;">Nino</p>
+          <img id="4" src="Imagenes/Garfield.png" style="display:none; flex-direction: column;">
+          <p id="d" style="display:none; flex-direction: column;">Garfield</p>
+          <img id="5" src="Imagenes/Turron.png" style="display:none; flex-direction: column;">
+          <p id="e" style="display:none; flex-direction: column;">Turron</p>
+          <img id="6" src="Imagenes/hunter.png" style="display:none; flex-direction: column;">
+          <p id="f" style="display:none; flex-direction: column;">Hunter</p>
+          <img id="7" src="Imagenes/Kimba.png" style="display:none; flex-direction: column;">
+          <p id="g" style="display:none; flex-direction: column;">Kimba</p>
+          <input type="submit" value="Enviar">
+          <input type="button" onclick="cerrarFormulario()" value="Cancelar">
+        </form>
       </div>
     </div>
   </div>

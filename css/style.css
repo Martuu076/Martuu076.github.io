@@ -78,9 +78,6 @@ body {
     height: 100%;
   }
   @media (max-width: 768px) {
-    .imgs{
-
-    }
     .contenedor {
       flex-direction: column;
     }
@@ -89,3 +86,129 @@ body {
       width: 80%; /* Ajuste para que la imagen y el texto ocupen la mayoría del ancho de pantalla en dispositivos móviles */
     }
   }
+
+  .formulario{
+    display: none;
+    align-items: center; 
+    justify-content: center;
+    margin-bottom: 1%;
+  }
+  
+  .formulario form {
+    width: 30vw; /* Ajusta el ancho del formulario al 90% del ancho de la ventana */
+    height: 30vh; /* Ajusta el alto del formulario al 90% del alto de la ventana */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Usa flexbox para el diseño */
+    flex-direction: column; /* Alinear elementos en columna */
+    justify-content: space-around; /* Distribuye los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+  }
+  .formulario input[type="text"], input[type="button"],input[type="password"]{
+    width: calc(100% - 20px); /* Ajusta el ancho para tener en cuenta el relleno */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  .formulario input[type="button"] {
+    background-color: #EFBB14;
+    color: white;
+    width: 15vw;
+    cursor: pointer;
+  }
+  
+  /* @media only screen and (max-width: 750px){
+    .cont{
+      display: flex; flex-direction: column;
+    }
+    .contenedorBoton{
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1%;
+    }
+    .contenedorBoton .botonF{
+      width: 65%; 
+      text-align: center;
+      background-color:#EAE2B7;
+      font-size: 120%;
+      border: 1px solid #000000;
+    }
+    
+    .formulario{
+      display: none;
+      align-items: center; 
+      justify-content: center;
+      margin-bottom: 1%;
+    }
+    
+    .formulario form {
+      width: 60vw; 
+      height: 60vh; 
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex; 
+      flex-direction: column; 
+      justify-content: space-around; 
+      align-items: center;
+    }
+    .formulario input[type="text"], input[type="button"],input[type="hidden"], input[type="submit"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    .formulario input[type="submit"], input[type="button"] {
+      background-color: #EFBB14;
+      color: white;
+      width: 40vw;
+      cursor: pointer;
+    }
+  } */
+  /* @media only screen and (max-width: 550px){
+    .formulario{
+      display: none;
+      align-items: center; 
+      justify-content: center;
+      margin-bottom: 1%;
+    }
+    
+    .formulario form {
+      width: 60vw; 
+      height: 60vh;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex; 
+      flex-direction: column; 
+      justify-content: space-around; 
+      align-items: center; 
+    }
+    .formulario input[type="text"], input[type="button"],input[type="email"], textarea, select, input[type="tel"], input[type="submit"] {
+      width: calc(100% - 20px); 
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    .formulario textarea {
+      width: calc(100% - 20px); 
+      height: 150px; 
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      resize: vertical; 
+    }
+    .formulario input[type="submit"], input[type="button"] {
+      background-color: #EFBB14;
+      color: white;
+      width: 40vw;
+      cursor: pointer;
+    }
+  } */

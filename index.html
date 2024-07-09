@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/encabezados.css">
-    <link rel="stylesheet" type="text/css" href="css/Sobre_nosotros.css">
+  <link rel="icon" href="Imagenes/Logo_V3.png">
 </head>
 
 <body>
@@ -30,6 +30,8 @@
         <a href="index.html"><img src="Imagenes/LOGOv.png" alt="LOGOv"></a>
         <!-- Botones, agregar la clase "paginaboton" en el boton que este en la pagina seleccionada--> 
         <aside class="menu_f"> <!-- El aside es para la botonera-->
+          <script src="JS/script.js"></script>
+          <button class="botones" onclick="mostrarFormulario(0)">Mantenimiento</button>
           <a href="index.html" class="paginaboton"> Home </a>
           <a href="Adopcion.html" class="botones"> Adopcion </a>
           <a href="En_vivo.html" class="botones"> En vivo </a>
@@ -47,7 +49,7 @@
       
       <!-- Cuarto encabezado-->
         <div class="indice">
-       <h1><a href="index.html">Home</a></h1>
+        <h1><a href="index.html">Home</a></h1>
         </div>
           </div>
         </div>
@@ -65,10 +67,18 @@
   <div class="contenedor">
     <div class="imagen-circular"></div>
     <div class="texto1">
-      <h1>CONÓCENOS</h1>
-      <p>Somos un equipo de personas impulsadas por la empatía hacia los animales reconocidos como nuestros semejantes debido a su capacidad para experimentar placer, dolor y sufrimiento.</p>
+      <h1>Sobre Nosotros</h1>
+      <p>Conocé nuestro Refugio, motivación y cómo unirte al proyecto.</p>
       <a href="Sobre_nosotros.html" class="boton">VER MÁS</a>
     </div>
+  </div>
+  <div class="formulario" id="Formulario">
+    <form id="contact-form" >
+      <input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
+      <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required>
+      <input type="button" onclick="redireccionar()" value="Enviar">
+      <input type="button" onclick="cerrarFormulario()" value="Cancelar">
+    </form>
   </div>
   <footer> <!--Footer-->
     <img src="Imagenes/Logo_V2_Fondo_oscuro.png" alt="logo" class="logo2">
@@ -76,7 +86,7 @@
   <!-- Link al swiper js -->
   <script src="JS/swiper-bundle.min.js"></script>
   <script src="JS/swiper-bundle.min.js.map"></script>
-  <script src="JS/js"></script>
+  <script src="JS/js.js"></script>
 </body>
 </html>
 

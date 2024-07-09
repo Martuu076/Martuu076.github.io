@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Datos del Gatito</title>
+    <link rel="stylesheet" href="./static/css/estilos.css">
+    <link rel="icon" href="../Imagenes/Logo_V3.png">
+</head>
+
+<body>
+    <div class="logo-centrado">
+        <a href="../index.html"><img src="../Imagenes/LOGOv.png" alt="LOGOv"></a>
+    </div>
+    <h1>Modificar Datos del Gatito</h1><br>
+
+    <table id="gatitos-table">
+        <thead>
+            <tr>
+                <th>Id_gatito</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Imagen</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table><br>
+
+    <div id="form-container" style="display: none;">
+        <h2>Actualizar Gatito</h2>
+        <form id="form-actualizar-gatito" enctype="multipart/form-data">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required><br>
+            <label for="descripcion">Descripción:</label>
+            <input type="text" id="descripcion" required><br>
+            <label for="imagen">Nueva Imagen:</label>
+            <input type="file" id="imagen"><br>
+            <button type="submit">Actualizar Gatito</button>
+            <button type="button" onclick="cancelarActualizacion()">Cancelar</button>
+        </form>
+    </div>
+
+    <div class="contenedor-centrado">
+        <a href="../back.html">Menu principal</a>
+    </div>
+
+    <script>
+        const URL = "https://Psico.pythonanywhere.com/"
+        let id_gatito = '';
+        let nombre = '';
+        let descripcion = '';
+        let imagen = '';
+
+        // Realizamos la solicitud GET al servidor para obtener todos los productos.
+        fetch(URL + 'gatitos') // Realiza una solicitud GET al servidor y obtener la lista de productos.
+            .then(response => {
+                // Si es exitosa (response.ok), convierte los datos de la respuesta de formato JSON a un objeto JavaScript.
+                if (response.ok) { return response.json(); }
+            })
+            // Asigna los datos de los productos obtenidos a la propiedad productos del estado.
+            .then(data => {
+                const gatitosTable = document.getElementById('gatitos-table').getElementsByTagName('tbody')[0];
+                gatitosTable.innerHTML = ''; // Limpia la tabla antes de insertar nuevos datos
+                data.forEach(gatito => {
+                    const row = gatitosTable.insertRow();
+                    row.innerHTML = `
+                        <td>${gatito.id_gatito}</td>
+                        <td>${gatito.nombre}</td>
+                        <td>${gatito.descripcion}</td>
+                        <td>${gatito.imagen}</td>
+                        <td><button onclick="mostrarFormularioActualizar('${gatito.id_gatito}')">Modificar</button></td>
+                    `;
+                });
+            })
+            //Captura y maneja errores, mostrando una alerta en caso de error al obtener los productos.
+            .catch(function (error) {
+                // Código para manejar errores
+                alert('Error al obtener los gatitos.');
+            });
+
+        function mostrarFormularioActualizar(id) {
+            id_gatito = id;
+            document.getElementById('nombre').value = "";
+            document.getElementById('descripcion').value = "";
+            document.getElementById('imagen').value = '';
+            document.getElementById('form-container').style.display = 'block';
+        }
+
+        document.getElementById('form-actualizar-gatito').addEventListener('submit', function(event) {
+            event.preventDefault();
+            nombre = document.getElementById('nombre').value;
+            descripcion = document.getElementById('descripcion').value;
+            imagen = document.getElementById('imagen').value;
+
+            const formData = new FormData();
+            formData.append('nombre', nombre);
+            formData.append('descripcion', descripcion);
+            formData.append('imagen', imagen);
+
+            fetch(URL + gatitos/${id_gatito}, {
+                method: 'PUT',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Gatito actualizado correctamente.');
+                    //obtenerGatitos();
+                    //document.getElementById('form-container').style.display = 'none';
+                } else {
+                    throw new Error('Error al actualizar el gatito.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error al actualizar el gatito.');
+            });
+        });
+
+        function cancelarActualizacion() {
+            document.getElementById('form-container').style.display = 'none';
+        }
+
+        //document.addEventListener('DOMContentLoaded', obtenerGatitos);
+    </script>
+</body>
+</html>
