@@ -52,19 +52,43 @@ class Catalogo:
         # Cerrar el cursor inicial y abrir uno nuevo con el parámetro dictionary=True
         self.cursor.close()
         self.cursor = self.conn.cursor(dictionary=True)
+        
+    def conectar(self):
+        try:
+            self.conn = mysql.connector.connect(
+                host=bd.host,
+                user=bd.user,
+                password=bd.password,
+                database=bd.database
+            )
+            self.cursor = self.conn.cursor(dictionary=True)
+            return "OK"
+        except:
+            return "ERROR"
+    
+    def desconectar(self):
+        try:
+            self.cursor.close()
+            self.conn.close()
+            return "OK"
+        except:
+            return "ERROR"
 
     def listar_gatitos(self):
+        self.conectar()
         self.cursor.execute("SELECT * FROM gatitos")
         gatitos = self.cursor.fetchall()
+        self.desconectar()
         return gatitos
 
     def consultar_gatito(self, id_gatito):
-        # Consultamos un producto a partir de su código
+        self.conectar()
         self.cursor.execute(f"SELECT * FROM gatitos WHERE id_gatito = {id_gatito}")
+        self.desconectar()
         return self.cursor.fetchone()
 
     def mostrar_gatito(self, id_gatito):
-        # Mostramos los datos de un producto a partir de su código
+        self.conectar()
         gatito = self.consultar_gatito(id_gatito)
         if gatito:
             print("-" * 40)
@@ -75,27 +99,31 @@ class Catalogo:
             print("-" * 40)
         else:
             print("Gatito no encontrado.")
+        self.desconectar()
 
     def agregar_gatito(self,nombre,descripcion,imagen):
+        self.conectar()
         sql = "INSERT INTO gatitos (nombre, descripcion, imagen) VALUES (%s, %s, %s)"
         valores = (nombre,descripcion,imagen)
-
         self.cursor.execute(sql,valores)
         self.conn.commit()
+        self.desconectar()
         return self.cursor.lastrowid
 
     def modificar_gatito(self, id_gatito, nueva_nombre, nueva_descripcion, nueva_imagen):
+        self.conectar()
         sql = "UPDATE gatitos SET nombre = %s, descripcion = %s,  imagen = %s, WHERE id_gatito = %s"
         valores = (nueva_nombre,nueva_descripcion,nueva_imagen, id_gatito)
-
         self.cursor.execute(sql, valores)
         self.conn.commit()
+        self.desconectar()
         return self.cursor.rowcount > 0
 
     def eliminar_gatito(self, id_gatito):
-        # Eliminamos un producto de la tabla a partir de su código
+        self.conectar()
         self.cursor.execute(f"DELETE FROM gatitos WHERE id_gatito = {id_gatito}")
         self.conn.commit()
+        self.desconectar()
         return self.cursor.rowcount > 0
 
 #--------------------------------------------------------------------
