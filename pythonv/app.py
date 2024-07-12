@@ -112,7 +112,7 @@ class Catalogo:
 
     def modificar_gatito(self, id_gatito, nueva_nombre, nueva_descripcion, nueva_imagen):
         self.conectar()
-        sql = "UPDATE gatitos SET nombre = %s, descripcion = %s,  imagen = %s, WHERE id_gatito = %s"
+        sql = "UPDATE gatitos SET nombre = %s, descripcion = %s,  imagen = %s WHERE id_gatito = %s"
         valores = (nueva_nombre,nueva_descripcion,nueva_imagen, id_gatito)
         self.cursor.execute(sql, valores)
         self.conn.commit()
@@ -180,6 +180,7 @@ def modificar_gatito(id_gatito):
             nombre_imagen = f"{nombre_base}_{int(time.time())}{extension}"
             # Guardar la imagen en el servidor
             imagen.save(os.path.join(ruta_destino, nombre_imagen))
+            #imagen.save(os.path.join('https://saporapo.pythonanywhere.com/static/imagenes/', nombre_imagen))
             # Busco el producto guardado
             gatito = catalogo.consultar_gatito(id_gatito)
             if gatito: # Si existe el producto...
